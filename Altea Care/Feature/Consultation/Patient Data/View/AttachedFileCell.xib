@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AttachedFileCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvv-q4-ZWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phF-zM-veO" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                                <rect key="frame" x="20" y="14" width="35" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-Kw-jWZ" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                                <rect key="frame" x="129" y="14" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qp6-TW-0Wg">
+                                <rect key="frame" x="202" y="7" width="34" height="30"/>
+                                <state key="normal" title="Lihat">
+                                    <color key="titleColor" red="0.3803921569" green="0.78039215689999997" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFq-GM-3cF">
+                                <rect key="frame" x="256" y="7" width="44" height="30"/>
+                                <state key="normal" title="Hapus"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qp6-TW-0Wg" firstAttribute="leading" secondItem="1OT-Kw-jWZ" secondAttribute="trailing" constant="40" id="42x-I6-S9u"/>
+                            <constraint firstItem="1OT-Kw-jWZ" firstAttribute="centerY" secondItem="Wvv-q4-ZWJ" secondAttribute="centerY" id="L2d-c2-4mJ"/>
+                            <constraint firstItem="1OT-Kw-jWZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="phF-zM-veO" secondAttribute="trailing" constant="10" id="XNl-og-8SJ"/>
+                            <constraint firstItem="phF-zM-veO" firstAttribute="centerY" secondItem="Wvv-q4-ZWJ" secondAttribute="centerY" id="YS9-kN-eoe"/>
+                            <constraint firstAttribute="trailing" secondItem="vFq-GM-3cF" secondAttribute="trailing" constant="20" id="YZG-ay-F94"/>
+                            <constraint firstItem="vFq-GM-3cF" firstAttribute="leading" secondItem="Qp6-TW-0Wg" secondAttribute="trailing" constant="20" id="ob7-xK-lQg"/>
+                            <constraint firstItem="phF-zM-veO" firstAttribute="leading" secondItem="Wvv-q4-ZWJ" secondAttribute="leading" constant="20" id="pNN-fV-QsH"/>
+                            <constraint firstItem="vFq-GM-3cF" firstAttribute="centerY" secondItem="Wvv-q4-ZWJ" secondAttribute="centerY" id="wWd-wD-KRS"/>
+                            <constraint firstItem="Qp6-TW-0Wg" firstAttribute="centerY" secondItem="Wvv-q4-ZWJ" secondAttribute="centerY" id="y1Q-wf-79X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Wvv-q4-ZWJ" secondAttribute="trailing" id="1ME-db-pDv"/>
+                    <constraint firstItem="Wvv-q4-ZWJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7p4-gm-lF9"/>
+                    <constraint firstItem="Wvv-q4-ZWJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fXb-1J-sZI"/>
+                    <constraint firstAttribute="bottom" secondItem="Wvv-q4-ZWJ" secondAttribute="bottom" id="ohw-UM-Cpv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deleteButton" destination="vFq-GM-3cF" id="LIc-kO-FR3"/>
+                <outlet property="fileName" destination="phF-zM-veO" id="b3X-ZP-SQ9"/>
+                <outlet property="fileSize" destination="1OT-Kw-jWZ" id="uLm-ry-0Td"/>
+                <outlet property="previewButton" destination="Qp6-TW-0Wg" id="jtb-Xx-3dI"/>
+            </connections>
+            <point key="canvasLocation" x="-74" y="62"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

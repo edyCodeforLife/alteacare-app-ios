@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoucherVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="applyButton" destination="kEn-Lw-y1d" id="fvo-Ft-aCe"/>
+                <outlet property="resultLabel" destination="aDO-8n-JnH" id="NmE-et-O5h"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voucherTF" destination="ccw-gx-7ne" id="kym-3W-QZp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYb-ar-Ner">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan kode voucher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrv-Z4-PTR">
+                            <rect key="frame" x="37" y="21" width="340" height="17"/>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dapatkan potongan biaya telekonsultasi dengan memasukkan kode voucher yang Anda miliki" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gx-HJ-50L">
+                            <rect key="frame" x="37" y="46" width="340" height="34"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                            <color key="textColor" red="0.17254901960784313" green="0.32156862745098036" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeay! Voucher berhasil ditambahkan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDO-8n-JnH">
+                            <rect key="frame" x="37" y="169" width="340" height="15"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                            <color key="textColor" red="0.17254901959999999" green="0.32156862749999998" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Axb-SZ-f5R">
+                            <rect key="frame" x="37" y="101" width="340" height="52"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZv-js-h0U" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="52"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Masukkan Voucher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-gx-7ne">
+                                            <rect key="frame" x="5" y="5" width="165" height="42"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="CDr-7I-dGu"/>
+                                        <constraint firstItem="ccw-gx-7ne" firstAttribute="top" secondItem="MZv-js-h0U" secondAttribute="top" constant="5" id="SDb-8t-g6c"/>
+                                        <constraint firstItem="ccw-gx-7ne" firstAttribute="leading" secondItem="MZv-js-h0U" secondAttribute="leading" constant="5" id="eOj-A9-ybd"/>
+                                        <constraint firstAttribute="trailing" secondItem="ccw-gx-7ne" secondAttribute="trailing" constant="5" id="lZg-id-0Qd"/>
+                                        <constraint firstAttribute="width" constant="175" id="qEe-IW-nsN"/>
+                                        <constraint firstAttribute="bottom" secondItem="ccw-gx-7ne" secondAttribute="bottom" constant="5" id="qqW-wE-hQe"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.8666666666666667" green="0.89803921568627454" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEn-Lw-y1d" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="191" y="0.0" width="149" height="52"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="PHK-P1-1J2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="1gx-HJ-50L" firstAttribute="leading" secondItem="LYb-ar-Ner" secondAttribute="leading" constant="37" id="1bm-Dn-d9Y"/>
+                        <constraint firstAttribute="trailing" secondItem="Hrv-Z4-PTR" secondAttribute="trailing" constant="37" id="27o-Le-R1z"/>
+                        <constraint firstItem="Axb-SZ-f5R" firstAttribute="leading" secondItem="LYb-ar-Ner" secondAttribute="leading" constant="37" id="5d0-nR-nID"/>
+                        <constraint firstAttribute="trailing" secondItem="aDO-8n-JnH" secondAttribute="trailing" constant="37" id="9Kj-tB-n3Y"/>
+                        <constraint firstItem="Hrv-Z4-PTR" firstAttribute="top" secondItem="LYb-ar-Ner" secondAttribute="top" constant="21" id="CQU-k2-qfu"/>
+                        <constraint firstItem="Hrv-Z4-PTR" firstAttribute="leading" secondItem="LYb-ar-Ner" secondAttribute="leading" constant="37" id="Iym-e2-3LD"/>
+                        <constraint firstItem="aDO-8n-JnH" firstAttribute="top" secondItem="Axb-SZ-f5R" secondAttribute="bottom" constant="16" id="N8A-Pl-Qso"/>
+                        <constraint firstItem="Axb-SZ-f5R" firstAttribute="top" secondItem="1gx-HJ-50L" secondAttribute="bottom" constant="21" id="gPG-XG-HZI"/>
+                        <constraint firstAttribute="trailing" secondItem="1gx-HJ-50L" secondAttribute="trailing" constant="37" id="gkF-e5-Bdo"/>
+                        <constraint firstAttribute="trailing" secondItem="Axb-SZ-f5R" secondAttribute="trailing" constant="37" id="n69-aK-f1j"/>
+                        <constraint firstItem="aDO-8n-JnH" firstAttribute="leading" secondItem="LYb-ar-Ner" secondAttribute="leading" constant="37" id="rSa-FT-f7r"/>
+                        <constraint firstItem="1gx-HJ-50L" firstAttribute="top" secondItem="Hrv-Z4-PTR" secondAttribute="bottom" constant="8" id="wEV-hq-2yi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LYb-ar-Ner" secondAttribute="trailing" id="B9K-SR-agQ"/>
+                <constraint firstItem="LYb-ar-Ner" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dO0-x5-I7d"/>
+                <constraint firstItem="LYb-ar-Ner" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ojJ-cF-ZDh"/>
+                <constraint firstAttribute="bottom" secondItem="LYb-ar-Ner" secondAttribute="bottom" id="pg4-LU-qNg"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

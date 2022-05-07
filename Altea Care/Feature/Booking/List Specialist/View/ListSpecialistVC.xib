@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListSpecialistVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="Rpy-zp-LGM" id="dBs-7O-ONe"/>
+                <outlet property="cvSpesialist" destination="6Ea-7C-LeX" id="U0b-sy-U7u"/>
+                <outlet property="navigationTitleLabel" destination="4VI-CJ-84z" id="W5D-6J-01G"/>
+                <outlet property="searchQueryHeight" destination="vc9-LZ-KSr" id="HlQ-Cd-uN4"/>
+                <outlet property="searchQueryLabel" destination="w8S-iX-hne" id="fyI-wK-1b2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokter Spesialis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VI-CJ-84z">
+                    <rect key="frame" x="36" y="54" width="358" height="24.5"/>
+                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                    <color key="textColor" red="0.2196078431372549" green="0.40784313725490196" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6Ea-7C-LeX">
+                    <rect key="frame" x="15" y="118" width="384" height="778"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ex0-QI-lIc">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-zp-LGM">
+                    <rect key="frame" x="16" y="52" width="20" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="SIt-zY-sMg"/>
+                    </constraints>
+                    <buttonConfiguration key="configuration" style="plain" image="ChevronBackButtonAltea"/>
+                    <connections>
+                        <action selector="onBackPressed:" destination="-1" eventType="touchUpInside" id="nDD-Go-dX7"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8S-iX-hne" userLabel="querySearch">
+                    <rect key="frame" x="24" y="88.5" width="366" height="14.5"/>
+                    <color key="tintColor" red="0.24313725489999999" green="0.54901960780000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14.5" id="vc9-LZ-KSr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.24313725489999999" green="0.54901960780000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Rpy-zp-LGM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="45q-J2-2wf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4VI-CJ-84z" secondAttribute="trailing" constant="20" id="8eu-88-jls"/>
+                <constraint firstAttribute="trailing" secondItem="6Ea-7C-LeX" secondAttribute="trailing" constant="15" id="AD4-Bd-uCh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w8S-iX-hne" secondAttribute="trailing" constant="24" id="H0W-5O-pTP"/>
+                <constraint firstItem="Rpy-zp-LGM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="Ioa-3i-ecg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4VI-CJ-84z" secondAttribute="trailing" constant="20" id="JXp-dC-sxa"/>
+                <constraint firstItem="w8S-iX-hne" firstAttribute="top" secondItem="4VI-CJ-84z" secondAttribute="bottom" constant="10" id="P2G-fg-uf5"/>
+                <constraint firstItem="4VI-CJ-84z" firstAttribute="leading" secondItem="Rpy-zp-LGM" secondAttribute="trailing" id="Xav-QH-dCn"/>
+                <constraint firstItem="6Ea-7C-LeX" firstAttribute="top" secondItem="w8S-iX-hne" secondAttribute="bottom" constant="15" id="aKq-XO-nNx"/>
+                <constraint firstItem="4VI-CJ-84z" firstAttribute="leading" secondItem="Rpy-zp-LGM" secondAttribute="trailing" id="bWO-z0-ZiB"/>
+                <constraint firstItem="6Ea-7C-LeX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="e63-C5-BYq"/>
+                <constraint firstAttribute="bottom" secondItem="6Ea-7C-LeX" secondAttribute="bottom" id="fCE-qf-gVj"/>
+                <constraint firstItem="4VI-CJ-84z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="vYN-8n-Anl"/>
+                <constraint firstItem="w8S-iX-hne" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="xZc-fj-Rm7"/>
+                <constraint firstItem="4VI-CJ-84z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="yK3-4p-CMe"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ChevronBackButtonAltea" width="11" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicalResumeVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="LcV-PQ-WKR" id="e9k-Ve-o10"/>
+                <outlet property="containerHeightConstraint" destination="JzH-do-4NG" id="4bN-c2-dzw"/>
+                <outlet property="containerView" destination="wFn-If-ymI" id="1Bp-wL-f6p"/>
+                <outlet property="tableView" destination="A4y-2E-j3G" id="oBS-eE-JkE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A4y-2E-j3G">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFn-If-ymI">
+                    <rect key="frame" x="0.0" y="787" width="414" height="75"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcV-PQ-WKR" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="15" y="15" width="384" height="45"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="wHU-xd-M2A"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="JzH-do-4NG"/>
+                        <constraint firstItem="LcV-PQ-WKR" firstAttribute="centerY" secondItem="wFn-If-ymI" secondAttribute="centerY" id="Qfm-us-rle"/>
+                        <constraint firstItem="LcV-PQ-WKR" firstAttribute="centerX" secondItem="wFn-If-ymI" secondAttribute="centerX" id="XAC-kj-kc0"/>
+                        <constraint firstAttribute="trailing" secondItem="LcV-PQ-WKR" secondAttribute="trailing" constant="15" id="iAg-Ih-z81"/>
+                        <constraint firstItem="LcV-PQ-WKR" firstAttribute="leading" secondItem="wFn-If-ymI" secondAttribute="leading" constant="15" id="rfq-fq-ia1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="A4y-2E-j3G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2vL-Tt-iKj"/>
+                <constraint firstItem="wFn-If-ymI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4zZ-Hh-AL9"/>
+                <constraint firstAttribute="bottom" secondItem="A4y-2E-j3G" secondAttribute="bottom" id="5aA-sh-7zj"/>
+                <constraint firstItem="A4y-2E-j3G" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mhh-R9-JLh"/>
+                <constraint firstItem="A4y-2E-j3G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uuK-fT-6UO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wFn-If-ymI" secondAttribute="trailing" id="wcE-dk-cUR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wFn-If-ymI" secondAttribute="bottom" id="zyF-WJ-zCh"/>
+            </constraints>
+            <point key="canvasLocation" x="21.739130434782609" y="46.875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

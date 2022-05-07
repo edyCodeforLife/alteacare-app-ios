@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="213" id="KGk-i7-Jjw" customClass="LeftImageCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="213"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="213"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ex-BQ-BgN" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                        <rect key="frame" x="13" y="3" width="200" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SUA-bV-eQf" customClass="ACImageView" customModule="Altea_Care" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-play" translatesAutoresizingMaskIntoConstraints="NO" id="fct-I6-XTD">
+                                <rect key="frame" x="70" y="70" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7oS-f2-qwN"/>
+                                    <constraint firstAttribute="width" constant="60" id="cbw-Pi-kAp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83921568629999999" green="0.92941176469999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="250" constant="200" id="34M-gI-qSo"/>
+                            <constraint firstAttribute="width" secondItem="9Ex-BQ-BgN" secondAttribute="height" id="8na-w6-k7N"/>
+                            <constraint firstAttribute="bottom" secondItem="SUA-bV-eQf" secondAttribute="bottom" id="GFy-DB-5q0"/>
+                            <constraint firstItem="SUA-bV-eQf" firstAttribute="top" secondItem="9Ex-BQ-BgN" secondAttribute="top" id="VFo-24-5aL"/>
+                            <constraint firstItem="fct-I6-XTD" firstAttribute="centerY" secondItem="9Ex-BQ-BgN" secondAttribute="centerY" id="YBH-4g-OIE"/>
+                            <constraint firstItem="fct-I6-XTD" firstAttribute="centerX" secondItem="9Ex-BQ-BgN" secondAttribute="centerX" id="lE5-2a-g0b"/>
+                            <constraint firstItem="SUA-bV-eQf" firstAttribute="leading" secondItem="9Ex-BQ-BgN" secondAttribute="leading" id="mVt-dJ-c6U"/>
+                            <constraint firstAttribute="trailing" secondItem="SUA-bV-eQf" secondAttribute="trailing" id="phB-Dx-TWk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9Ex-BQ-BgN" secondAttribute="bottom" constant="3" id="CV7-bO-BH8"/>
+                    <constraint firstAttribute="trailing" secondItem="9Ex-BQ-BgN" secondAttribute="trailing" constant="100" id="erK-dJ-4O0"/>
+                    <constraint firstItem="9Ex-BQ-BgN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="wYG-AU-qsk"/>
+                    <constraint firstItem="9Ex-BQ-BgN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="wZP-Fc-ZxN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bubbleChatView" destination="9Ex-BQ-BgN" id="YCG-zN-u34"/>
+                <outlet property="messageIV" destination="SUA-bV-eQf" id="47G-C6-RzG"/>
+                <outlet property="playIndicatorIV" destination="fct-I6-XTD" id="eJD-QZ-fZD"/>
+            </connections>
+            <point key="canvasLocation" x="12.318840579710146" y="136.27232142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-play" width="13" height="18"/>
+    </resources>
+</document>

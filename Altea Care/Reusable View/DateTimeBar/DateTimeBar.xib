@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateTimeBar" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="leftIcon" destination="bE2-0r-YDr" id="jLJ-1I-77A"/>
+                <outlet property="leftLabel" destination="Hme-Zb-qNk" id="OA7-ei-RTJ"/>
+                <outlet property="rightIcon" destination="43S-e0-bsh" id="3hb-Wf-DMh"/>
+                <outlet property="rightLabel" destination="Af1-5z-V5j" id="MJA-zO-atC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Pet-kK-797">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date_range" translatesAutoresizingMaskIntoConstraints="NO" id="bE2-0r-YDr">
+                    <rect key="frame" x="10" y="25.5" width="50.5" height="50.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bE2-0r-YDr" secondAttribute="height" multiplier="50:50" id="ofa-kY-B3I"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-Zb-qNk">
+                    <rect key="frame" x="70.5" y="50.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarm" translatesAutoresizingMaskIntoConstraints="NO" id="43S-e0-bsh">
+                    <rect key="frame" x="343.5" y="25.5" width="50.5" height="50.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="43S-e0-bsh" secondAttribute="height" multiplier="1:1" id="6af-LW-UaN"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af1-5z-V5j">
+                    <rect key="frame" x="404" y="50.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gNB-LG-SGA"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bE2-0r-YDr" firstAttribute="leading" secondItem="gNB-LG-SGA" secondAttribute="leading" constant="10" id="C3j-IK-Ha1"/>
+                <constraint firstItem="43S-e0-bsh" firstAttribute="leading" secondItem="Hme-Zb-qNk" secondAttribute="trailing" priority="250" constant="10" id="Kec-C2-Vrc"/>
+                <constraint firstItem="bE2-0r-YDr" firstAttribute="centerY" secondItem="Pet-kK-797" secondAttribute="centerY" id="PK9-4v-I3A"/>
+                <constraint firstItem="Hme-Zb-qNk" firstAttribute="leading" secondItem="bE2-0r-YDr" secondAttribute="trailing" constant="10" id="RSu-8p-jtW"/>
+                <constraint firstItem="Af1-5z-V5j" firstAttribute="centerY" secondItem="Pet-kK-797" secondAttribute="centerY" id="Wr3-he-nSt"/>
+                <constraint firstItem="Af1-5z-V5j" firstAttribute="leading" secondItem="43S-e0-bsh" secondAttribute="trailing" constant="10" id="XrJ-4d-6m4"/>
+                <constraint firstItem="bE2-0r-YDr" firstAttribute="height" secondItem="Pet-kK-797" secondAttribute="height" multiplier="0.5" id="ZHx-fe-gX7"/>
+                <constraint firstItem="43S-e0-bsh" firstAttribute="centerY" secondItem="Pet-kK-797" secondAttribute="centerY" id="kWr-Op-AFL"/>
+                <constraint firstItem="gNB-LG-SGA" firstAttribute="trailing" secondItem="Af1-5z-V5j" secondAttribute="trailing" constant="10" id="svp-EF-A64"/>
+                <constraint firstItem="Hme-Zb-qNk" firstAttribute="centerY" secondItem="Pet-kK-797" secondAttribute="centerY" id="vly-x3-nya"/>
+                <constraint firstItem="43S-e0-bsh" firstAttribute="height" secondItem="Pet-kK-797" secondAttribute="height" multiplier="0.5" id="yqW-zn-xP2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="47.826086956521742" y="369.97767857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alarm" width="20" height="20"/>
+        <image name="date_range" width="10" height="10"/>
+    </resources>
+</document>

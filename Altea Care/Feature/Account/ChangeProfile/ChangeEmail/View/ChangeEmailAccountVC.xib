@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeEmailAccountVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonVerification" destination="2lc-wn-7Pa" id="xcl-aK-zGG"/>
+                <outlet property="label" destination="Mk2-Cy-vTb" id="gxu-Rf-I9o"/>
+                <outlet property="labelEmail" destination="MfX-oJ-fdo" id="pSG-hB-bes"/>
+                <outlet property="tfEmailAddress" destination="If9-mA-Tzr" id="TDo-P0-cJI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubah data kontak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mk2-Cy-vTb">
+                    <rect key="frame" x="25" y="107" width="364" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfX-oJ-fdo">
+                    <rect key="frame" x="25" y="133" width="364" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tulis alamat email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="If9-mA-Tzr">
+                    <rect key="frame" x="25" y="159" width="364" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aMB-2c-Nw8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lc-wn-7Pa">
+                    <rect key="frame" x="25" y="780" width="364" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="00d-mz-KA0"/>
+                    </constraints>
+                    <state key="normal" title="Verifikasi"/>
+                    <connections>
+                        <action selector="verificationButtonTapped:" destination="-1" eventType="touchUpInside" id="jfG-dX-Lcv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="If9-mA-Tzr" secondAttribute="trailing" constant="25" id="09c-X3-OqM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2lc-wn-7Pa" secondAttribute="trailing" constant="25" id="2jS-IE-ZUC"/>
+                <constraint firstItem="MfX-oJ-fdo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="5Bv-q6-LP4"/>
+                <constraint firstItem="2lc-wn-7Pa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Anc-Id-S4h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2lc-wn-7Pa" secondAttribute="bottom" constant="30" id="AxM-2Z-YsC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mk2-Cy-vTb" secondAttribute="trailing" constant="25" id="FNM-eN-Rk9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MfX-oJ-fdo" secondAttribute="trailing" constant="25" id="WHT-mB-3ff"/>
+                <constraint firstItem="If9-mA-Tzr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="baR-IA-f49"/>
+                <constraint firstItem="If9-mA-Tzr" firstAttribute="top" secondItem="MfX-oJ-fdo" secondAttribute="bottom" constant="8" id="bnI-ci-qF4"/>
+                <constraint firstItem="Mk2-Cy-vTb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="guq-Ta-1td"/>
+                <constraint firstItem="Mk2-Cy-vTb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="63" id="kcg-JT-C24"/>
+                <constraint firstItem="MfX-oJ-fdo" firstAttribute="top" secondItem="Mk2-Cy-vTb" secondAttribute="bottom" constant="8" id="tDa-M1-zcc"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="55"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

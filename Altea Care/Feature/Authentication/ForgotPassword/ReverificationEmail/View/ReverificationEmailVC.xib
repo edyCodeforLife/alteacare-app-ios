@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReverificationEmailVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="askLabel" destination="6Iw-7c-yeQ" id="jq4-uL-9Iv"/>
+                <outlet property="buttonClose" destination="xys-Vl-R44" id="R2c-fW-6SW"/>
+                <outlet property="containerView" destination="KdZ-lm-oJo" id="jUo-KS-BG4"/>
+                <outlet property="imageIcon" destination="icb-bW-lJw" id="l1h-Xq-spl"/>
+                <outlet property="labelEmailVerification" destination="Qg8-Pu-uVf" id="8Mf-OP-tiq"/>
+                <outlet property="labelMessageSended" destination="eLu-rk-Bcv" id="xa5-oe-DZm"/>
+                <outlet property="pinCodeTF" destination="wnq-kI-Rdy" id="0v4-0K-awN"/>
+                <outlet property="resendOTPLabel" destination="5Kd-HL-jtV" id="f7n-gg-0Xp"/>
+                <outlet property="timeCounterLabel" destination="nbp-WI-ZUL" id="zP3-Ml-9NJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan kode verifikasi yang telah dikirim ke " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-Pu-uVf">
+                    <rect key="frame" x="25" y="79" width="325" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LKJ-sB-pyE">
+                    <rect key="frame" x="25" y="187" width="325" height="85"/>
+                    <subviews>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Ox-KA-4sH">
+                            <rect key="frame" x="0.0" y="-16" width="137.5" height="16"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QJ9-Bd-2Cg">
+                                    <rect key="frame" x="0.0" y="0.5" width="16" height="15"/>
+                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="mdB-N3-r7r"/>
+                                        <constraint firstAttribute="width" constant="16" id="tgF-qy-lvH"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifikasi tidak sesuai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUJ-id-CSh">
+                                    <rect key="frame" x="24" y="0.0" width="113.5" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbp-WI-ZUL">
+                            <rect key="frame" x="0.0" y="0.0" width="325" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.1750493944" green="0.3163197935" blue="0.54512560369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tidak menerima kode verifikasi?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iw-7c-yeQ">
+                            <rect key="frame" x="0.0" y="33" width="325" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kirim Ulang" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kd-HL-jtV">
+                            <rect key="frame" x="0.0" y="67" width="325" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="0.3803921569" green="0.78039215689999997" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="6Iw-7c-yeQ" firstAttribute="leading" secondItem="LKJ-sB-pyE" secondAttribute="leading" id="9ba-dC-YjF"/>
+                        <constraint firstAttribute="trailing" secondItem="5Kd-HL-jtV" secondAttribute="trailing" id="ClK-jz-CRt"/>
+                        <constraint firstAttribute="trailing" secondItem="nbp-WI-ZUL" secondAttribute="trailing" id="oG6-Tg-C45"/>
+                        <constraint firstItem="nbp-WI-ZUL" firstAttribute="leading" secondItem="LKJ-sB-pyE" secondAttribute="leading" id="rTC-OB-7jg"/>
+                        <constraint firstAttribute="trailing" secondItem="6Iw-7c-yeQ" secondAttribute="trailing" id="wkA-3c-k1O"/>
+                        <constraint firstItem="5Kd-HL-jtV" firstAttribute="leading" secondItem="LKJ-sB-pyE" secondAttribute="leading" id="zfe-BS-1gp"/>
+                    </constraints>
+                </stackView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-lm-oJo">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inform-success-icon" translatesAutoresizingMaskIntoConstraints="NO" id="icb-bW-lJw">
+                            <rect key="frame" x="18" y="17.5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="DXh-8H-lQh"/>
+                                <constraint firstAttribute="height" constant="25" id="zbF-pp-tNt"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email verifikasi telah dikirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLu-rk-Bcv">
+                            <rect key="frame" x="58" y="21.5" width="177.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xys-Vl-R44">
+                            <rect key="frame" x="343" y="19" width="12" height="22"/>
+                            <state key="normal" image="alert-close"/>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="6r2-U0-YXo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2259321809" green="0.39929902550000002" blue="0.61571443079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="RC7-Ts-d9Y"/>
+                        <constraint firstItem="eLu-rk-Bcv" firstAttribute="leading" secondItem="icb-bW-lJw" secondAttribute="trailing" constant="15" id="dN8-ye-1aO"/>
+                        <constraint firstItem="icb-bW-lJw" firstAttribute="centerY" secondItem="KdZ-lm-oJo" secondAttribute="centerY" id="hnQ-qh-XBw"/>
+                        <constraint firstItem="xys-Vl-R44" firstAttribute="centerY" secondItem="KdZ-lm-oJo" secondAttribute="centerY" id="ije-pJ-bwn"/>
+                        <constraint firstAttribute="trailing" secondItem="xys-Vl-R44" secondAttribute="trailing" constant="20" id="lux-7Y-Yjo"/>
+                        <constraint firstItem="icb-bW-lJw" firstAttribute="leading" secondItem="KdZ-lm-oJo" secondAttribute="leading" constant="18" id="prt-Cr-OCQ"/>
+                        <constraint firstItem="eLu-rk-Bcv" firstAttribute="centerY" secondItem="icb-bW-lJw" secondAttribute="centerY" id="xTg-oy-9C4"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnq-kI-Rdy" customClass="PinCodeTextField" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="106" width="325" height="61"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="61" id="BVC-BN-geX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineWidth">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineHSpacing">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineHeight">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                            <color key="value" red="0.24313725490196078" green="0.5490196078431373" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="secureText" value="NO"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="updatedUnderlineColor">
+                            <color key="value" red="0.24313725490196078" green="0.5490196078431373" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineVMargin">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qg8-Pu-uVf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="79" id="8Al-Zi-v0z"/>
+                <constraint firstItem="wnq-kI-Rdy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="8P1-QI-sEF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LKJ-sB-pyE" secondAttribute="trailing" constant="25" id="ABJ-uC-1BX"/>
+                <constraint firstItem="KdZ-lm-oJo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q3m-Zl-NbQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wnq-kI-Rdy" secondAttribute="trailing" constant="25" id="TVU-Qp-A7o"/>
+                <constraint firstItem="Qg8-Pu-uVf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="V7t-WK-Laf"/>
+                <constraint firstItem="wnq-kI-Rdy" firstAttribute="top" secondItem="Qg8-Pu-uVf" secondAttribute="bottom" constant="10" id="Zi5-6D-zXs"/>
+                <constraint firstItem="LKJ-sB-pyE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="dS7-h5-zpk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KdZ-lm-oJo" secondAttribute="bottom" id="idM-pz-atW"/>
+                <constraint firstItem="LKJ-sB-pyE" firstAttribute="top" secondItem="wnq-kI-Rdy" secondAttribute="bottom" constant="20" id="mjK-xt-S5y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qg8-Pu-uVf" secondAttribute="trailing" constant="25" id="vfW-nH-KCu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KdZ-lm-oJo" secondAttribute="trailing" id="wGn-V2-FTc"/>
+            </constraints>
+            <point key="canvasLocation" x="23.199999999999999" y="119.1904047976012"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alert-close" width="12" height="12"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <image name="inform-success-icon" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

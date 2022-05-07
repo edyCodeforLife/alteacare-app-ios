@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangePersonalDataVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonCall" destination="imT-tj-0oY" id="P0Y-ha-Pdy"/>
+                <outlet property="iconDoc" destination="EzQ-ca-15F" id="o4f-AP-ntI"/>
+                <outlet property="labelMessage" destination="9hQ-AT-9vs" id="C03-lT-fE8"/>
+                <outlet property="labelTitle" destination="gDK-uV-DBE" id="Ovz-ze-sEk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubah Data Pribadi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDK-uV-DBE">
+                    <rect key="frame" x="146" y="70" width="122" height="17"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconCallCenter" translatesAutoresizingMaskIntoConstraints="NO" id="EzQ-ca-15F">
+                    <rect key="frame" x="132" y="113" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="HAi-jv-NvC"/>
+                        <constraint firstAttribute="width" constant="150" id="qYT-6O-jM0"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hQ-AT-9vs">
+                    <rect key="frame" x="30" y="288" width="354" height="73"/>
+                    <string key="text">Data pribadi tidak dapat di ubah.
+
+Untuk mengubahnya silakan hubungi Layanan Pelanggan Alteacare</string>
+                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                    <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imT-tj-0oY" customClass="ButtonTemplate" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="411" width="364" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="oH2-dC-x5I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Hubungi Layanan Pelanggan">
+                        <color key="titleColor" red="0.3803921569" green="0.78039215689999997" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.3803921569" green="0.78039215689999997" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buttonGoToContactUs:" destination="-1" eventType="touchUpInside" id="g4B-XP-wrN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gDK-uV-DBE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="2S5-wO-M5W"/>
+                <constraint firstItem="9hQ-AT-9vs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="7Qr-F4-J5d"/>
+                <constraint firstItem="EzQ-ca-15F" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dgt-Iw-Dlv"/>
+                <constraint firstItem="imT-tj-0oY" firstAttribute="top" secondItem="9hQ-AT-9vs" secondAttribute="bottom" constant="50" id="MZQ-wU-SVH"/>
+                <constraint firstItem="imT-tj-0oY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TEV-YB-qlx"/>
+                <constraint firstItem="imT-tj-0oY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Vm4-my-dja"/>
+                <constraint firstAttribute="trailing" secondItem="9hQ-AT-9vs" secondAttribute="trailing" constant="30" id="fL3-uJ-a1R"/>
+                <constraint firstItem="9hQ-AT-9vs" firstAttribute="top" secondItem="EzQ-ca-15F" secondAttribute="bottom" constant="25" id="mLX-ME-fyn"/>
+                <constraint firstItem="EzQ-ca-15F" firstAttribute="top" secondItem="gDK-uV-DBE" secondAttribute="bottom" constant="26" id="uOA-yE-RzL"/>
+                <constraint firstItem="gDK-uV-DBE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="xl2-Vu-kzd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="59" y="79"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="imT-tj-0oY">
+            <size key="intrinsicContentSize" width="208" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="IconCallCenter" width="150" height="150"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

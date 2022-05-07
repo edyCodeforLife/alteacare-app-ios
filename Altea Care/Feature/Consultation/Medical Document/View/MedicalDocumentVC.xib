@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicalDocumentVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyView" destination="ZXH-1l-p07" id="cgR-rm-mdd"/>
+                <outlet property="tableView" destination="G3l-zY-ktq" id="Ak3-EG-VXJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-zY-ktq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXH-1l-p07">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dokumenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QDL-eN-mWs">
+                            <rect key="frame" x="177" y="347" width="60" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="Tm8-Jp-rpd"/>
+                                <constraint firstAttribute="width" constant="60" id="doD-l8-8cG"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dokumen medis belum tersedia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfr-Tr-Gmm">
+                            <rect key="frame" x="103" y="431" width="208.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                            <color key="textColor" red="0.5607843137254902" green="0.56470588235294117" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="QDL-eN-mWs" firstAttribute="centerX" secondItem="ZXH-1l-p07" secondAttribute="centerX" id="5bo-0S-Ov8"/>
+                        <constraint firstItem="QDL-eN-mWs" firstAttribute="centerY" secondItem="ZXH-1l-p07" secondAttribute="centerY" constant="-30" id="juP-PR-viI"/>
+                        <constraint firstItem="wfr-Tr-Gmm" firstAttribute="top" secondItem="QDL-eN-mWs" secondAttribute="bottom" constant="20" id="jvs-SS-dLn"/>
+                        <constraint firstItem="wfr-Tr-Gmm" firstAttribute="centerX" secondItem="ZXH-1l-p07" secondAttribute="centerX" id="oqG-QM-qkU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZXH-1l-p07" secondAttribute="trailing" id="6tv-jN-QSu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZXH-1l-p07" secondAttribute="bottom" id="EK7-Qk-Q6W"/>
+                <constraint firstItem="G3l-zY-ktq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MRa-3u-P3x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G3l-zY-ktq" secondAttribute="bottom" id="byn-Go-O4N"/>
+                <constraint firstItem="ZXH-1l-p07" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gnY-Px-qg0"/>
+                <constraint firstItem="ZXH-1l-p07" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oqe-8M-oBx"/>
+                <constraint firstItem="G3l-zY-ktq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="v0b-IB-H1j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G3l-zY-ktq" secondAttribute="trailing" id="ywq-Zv-6vI"/>
+            </constraints>
+            <point key="canvasLocation" x="23" y="47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dokumenIcon" width="24" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

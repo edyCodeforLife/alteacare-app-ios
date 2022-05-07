@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PatientDataVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="address" destination="8w5-FZ-7qu" id="aua-qq-W7c"/>
+                <outlet property="age" destination="Geq-QS-kE6" id="qM3-6a-z3e"/>
+                <outlet property="birthday" destination="Swq-7x-7X7" id="veJ-Wj-kVw"/>
+                <outlet property="button" destination="11B-Db-tXf" id="L8P-e5-RrS"/>
+                <outlet property="dataPasienTitle" destination="h1r-Ug-oFX" id="Sym-NR-HvM"/>
+                <outlet property="dateTimeBar" destination="EH1-1k-gch" id="ImP-cg-cbn"/>
+                <outlet property="doctorCard" destination="A4d-4T-bXk" id="Wha-fD-qZ2"/>
+                <outlet property="email" destination="l0N-7r-szR" id="e6Q-ph-2PH"/>
+                <outlet property="idCard" destination="hcb-EX-6uN" id="99v-kK-gpd"/>
+                <outlet property="name" destination="rdb-he-w7k" id="qZe-Z4-7fX"/>
+                <outlet property="patientContainer" destination="K8V-zz-BFm" id="O17-dX-I9D"/>
+                <outlet property="phone" destination="0NZ-DZ-o8V" id="EyC-Wd-q4p"/>
+                <outlet property="scrollView" destination="gN6-jq-U4n" id="opa-lm-PVb"/>
+                <outlet property="sex" destination="H2P-8y-dDy" id="k10-UJ-l1n"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gN6-jq-U4n">
+                    <rect key="frame" x="0.0" y="59" width="414" height="811"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-0g-zZQ" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4d-4T-bXk" customClass="DoctorCard" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="aXo-87-uZK"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EH1-1k-gch" customClass="DateTimeBar" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="80" width="414" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="mr5-JR-Lj8"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8V-zz-BFm">
+                                    <rect key="frame" x="20" y="195" width="374" height="320"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdb-he-w7k" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="3IK-zW-hxT"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Geq-QS-kE6" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="30" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="gNi-qa-xHL"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-7x-7X7" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="60" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="ZzT-WX-BUY"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2P-8y-dDy" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="90" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Jn7-1Z-Mki"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-EX-6uN" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="120" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Zx1-i0-x1b"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-DZ-o8V" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="150" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="FgQ-Fj-JUX"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0N-7r-szR" customClass="FormRow" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="180" width="374" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="pa6-ah-VAr"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-FZ-7qu" customClass="FormTextView" customModule="Altea_Care" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="218" width="374" height="80"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="e9y-qT-pvD"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="rdb-he-w7k" secondAttribute="trailing" id="1Mv-qo-FOx"/>
+                                        <constraint firstItem="H2P-8y-dDy" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="7Rl-gZ-msn"/>
+                                        <constraint firstAttribute="trailing" secondItem="0NZ-DZ-o8V" secondAttribute="trailing" id="B33-ui-WgL"/>
+                                        <constraint firstItem="Swq-7x-7X7" firstAttribute="top" secondItem="Geq-QS-kE6" secondAttribute="bottom" id="Bdj-wi-Hhm"/>
+                                        <constraint firstItem="rdb-he-w7k" firstAttribute="top" secondItem="K8V-zz-BFm" secondAttribute="top" id="C95-7j-X6U"/>
+                                        <constraint firstItem="rdb-he-w7k" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="EyS-yX-Mfo"/>
+                                        <constraint firstAttribute="trailing" secondItem="8w5-FZ-7qu" secondAttribute="trailing" id="G3p-0f-Liv"/>
+                                        <constraint firstItem="hcb-EX-6uN" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="Gy5-PO-Woc"/>
+                                        <constraint firstAttribute="trailing" secondItem="hcb-EX-6uN" secondAttribute="trailing" id="Leg-8b-KAT"/>
+                                        <constraint firstItem="l0N-7r-szR" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="OW2-4n-YNS"/>
+                                        <constraint firstItem="H2P-8y-dDy" firstAttribute="top" secondItem="Swq-7x-7X7" secondAttribute="bottom" id="PrB-lM-f1W"/>
+                                        <constraint firstItem="Swq-7x-7X7" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="QE4-c3-XNi"/>
+                                        <constraint firstAttribute="trailing" secondItem="Swq-7x-7X7" secondAttribute="trailing" id="Qoa-zl-vQu"/>
+                                        <constraint firstAttribute="trailing" secondItem="Geq-QS-kE6" secondAttribute="trailing" id="WII-OQ-fj6"/>
+                                        <constraint firstItem="0NZ-DZ-o8V" firstAttribute="top" secondItem="hcb-EX-6uN" secondAttribute="bottom" id="ZD1-jR-zUl"/>
+                                        <constraint firstAttribute="trailing" secondItem="l0N-7r-szR" secondAttribute="trailing" id="atp-Ta-80S"/>
+                                        <constraint firstItem="hcb-EX-6uN" firstAttribute="top" secondItem="H2P-8y-dDy" secondAttribute="bottom" id="dbj-8B-4Sb"/>
+                                        <constraint firstItem="0NZ-DZ-o8V" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="fzx-DV-1vh"/>
+                                        <constraint firstAttribute="height" constant="320" id="gal-np-Y1q"/>
+                                        <constraint firstItem="Geq-QS-kE6" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="lNa-dv-7XR"/>
+                                        <constraint firstAttribute="trailing" secondItem="H2P-8y-dDy" secondAttribute="trailing" id="qgh-ud-GDk"/>
+                                        <constraint firstItem="Geq-QS-kE6" firstAttribute="top" secondItem="rdb-he-w7k" secondAttribute="bottom" id="reb-lX-A16"/>
+                                        <constraint firstItem="l0N-7r-szR" firstAttribute="top" secondItem="0NZ-DZ-o8V" secondAttribute="bottom" id="tRV-09-h4f"/>
+                                        <constraint firstItem="8w5-FZ-7qu" firstAttribute="leading" secondItem="K8V-zz-BFm" secondAttribute="leading" id="tYk-sC-d4P"/>
+                                        <constraint firstItem="8w5-FZ-7qu" firstAttribute="top" secondItem="l0N-7r-szR" secondAttribute="bottom" constant="8" symbolic="YES" id="xwp-Mj-IwL"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Pasien" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1r-Ug-oFX" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="162" y="150" width="90" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="0yk-2m-nK6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="K8V-zz-BFm" secondAttribute="trailing" constant="20" id="0gi-4N-BE2"/>
+                                <constraint firstItem="h1r-Ug-oFX" firstAttribute="top" secondItem="EH1-1k-gch" secondAttribute="bottom" constant="30" id="1E0-wd-OSN"/>
+                                <constraint firstAttribute="trailing" secondItem="EH1-1k-gch" secondAttribute="trailing" id="6wn-3v-NA6"/>
+                                <constraint firstAttribute="trailing" secondItem="A4d-4T-bXk" secondAttribute="trailing" id="CLC-6g-bmX"/>
+                                <constraint firstItem="K8V-zz-BFm" firstAttribute="leading" secondItem="zKB-0g-zZQ" secondAttribute="leading" constant="20" id="DyW-Nv-P6g"/>
+                                <constraint firstItem="EH1-1k-gch" firstAttribute="top" secondItem="A4d-4T-bXk" secondAttribute="bottom" id="Fvt-b8-fHO"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="HdR-Yt-lnw"/>
+                                <constraint firstItem="A4d-4T-bXk" firstAttribute="leading" secondItem="zKB-0g-zZQ" secondAttribute="leading" id="I0c-vE-A6Z"/>
+                                <constraint firstAttribute="bottom" secondItem="K8V-zz-BFm" secondAttribute="bottom" priority="750" constant="24" id="Y2r-2V-0Bv"/>
+                                <constraint firstItem="EH1-1k-gch" firstAttribute="leading" secondItem="zKB-0g-zZQ" secondAttribute="leading" id="gNX-wg-5gp"/>
+                                <constraint firstItem="h1r-Ug-oFX" firstAttribute="centerX" secondItem="zKB-0g-zZQ" secondAttribute="centerX" id="hoh-78-Yjp"/>
+                                <constraint firstItem="K8V-zz-BFm" firstAttribute="top" secondItem="h1r-Ug-oFX" secondAttribute="bottom" constant="24" id="sdn-9U-sUr"/>
+                                <constraint firstItem="A4d-4T-bXk" firstAttribute="top" secondItem="zKB-0g-zZQ" secondAttribute="top" id="z9I-Ph-MCK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="zKB-0g-zZQ" firstAttribute="top" secondItem="gN6-jq-U4n" secondAttribute="top" id="Hmk-N6-lxT"/>
+                        <constraint firstAttribute="trailing" secondItem="zKB-0g-zZQ" secondAttribute="trailing" id="OUm-KP-RKi"/>
+                        <constraint firstItem="zKB-0g-zZQ" firstAttribute="leading" secondItem="gN6-jq-U4n" secondAttribute="leading" id="hDP-Iw-qog"/>
+                        <constraint firstAttribute="bottom" secondItem="zKB-0g-zZQ" secondAttribute="bottom" id="m0c-6G-Whx"/>
+                    </constraints>
+                </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11B-Db-tXf" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="30" y="882" width="354" height="52"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="x3Z-eW-Hdl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="11B-Db-tXf" firstAttribute="top" secondItem="gN6-jq-U4n" secondAttribute="bottom" constant="12" id="4th-DH-RI5"/>
+                <constraint firstItem="11B-Db-tXf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8h4-QD-Zmv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="11B-Db-tXf" secondAttribute="bottom" constant="32" id="BKK-ai-uqg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="11B-Db-tXf" secondAttribute="trailing" constant="30" id="FgQ-YZ-YDk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gN6-jq-U4n" secondAttribute="trailing" id="Sel-Qh-vHC"/>
+                <constraint firstItem="gN6-jq-U4n" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="YdS-Il-UHj"/>
+                <constraint firstItem="zKB-0g-zZQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="jfh-pY-tpx"/>
+                <constraint firstItem="gN6-jq-U4n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qUJ-Ee-rpK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="21.739130434782609" y="46.875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

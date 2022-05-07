@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountDownViewController" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="0WN-iJ-PAJ" id="0re-y5-hlq"/>
+                <outlet property="countDownLabel" destination="n62-HG-AQw" id="xwn-M9-gpJ"/>
+                <outlet property="dateTimeBar" destination="sUb-hF-QGa" id="lID-Lp-qEx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IC-96-2Ma">
+                    <rect key="frame" x="20" y="64" width="338" height="22"/>
+                    <string key="text">Jadwal Telekonsultasi
+</string>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WN-iJ-PAJ">
+                    <rect key="frame" x="374" y="64" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="PRG-pW-DtY"/>
+                        <constraint firstAttribute="height" constant="20" id="nvV-q6-zee"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="alert-close-info"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n62-HG-AQw">
+                    <rect key="frame" x="16" y="110" width="382" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dari jadwal Telekonsultasi Anda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwN-2p-TUb">
+                    <rect key="frame" x="20" y="134" width="374" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saat ini telekonsultasi belum dapat dilakukan, konsultasi akan dilakukan pada:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jel-Zx-OJn">
+                    <rect key="frame" x="20" y="167" width="374" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-hF-QGa" customClass="DateTimeBar" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="8" y="218.5" width="398" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="gYa-qh-XjR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jel-Zx-OJn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2of-CR-QjB"/>
+                <constraint firstItem="dwN-2p-TUb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="4wS-kf-H0a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n62-HG-AQw" secondAttribute="trailing" constant="16" id="CCW-3F-Cc9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jel-Zx-OJn" secondAttribute="trailing" constant="20" id="E0C-9B-XzD"/>
+                <constraint firstItem="0WN-iJ-PAJ" firstAttribute="leading" secondItem="0IC-96-2Ma" secondAttribute="trailing" constant="16" id="ITM-Zo-CzB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sUb-hF-QGa" secondAttribute="trailing" constant="8" id="J1K-cu-zfs"/>
+                <constraint firstItem="dwN-2p-TUb" firstAttribute="top" secondItem="n62-HG-AQw" secondAttribute="bottom" constant="24" id="KIf-G3-Lmv"/>
+                <constraint firstItem="sUb-hF-QGa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="NcM-nW-Qq9"/>
+                <constraint firstItem="0IC-96-2Ma" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Opb-6U-iyw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sUb-hF-QGa" secondAttribute="bottom" constant="20" id="VRb-fO-d7w"/>
+                <constraint firstItem="jel-Zx-OJn" firstAttribute="top" secondItem="dwN-2p-TUb" secondAttribute="bottom" constant="16" id="Yzd-MF-KdH"/>
+                <constraint firstItem="0WN-iJ-PAJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ZlS-dH-lwi"/>
+                <constraint firstItem="0IC-96-2Ma" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="d7O-Zj-5Jr"/>
+                <constraint firstItem="n62-HG-AQw" firstAttribute="top" secondItem="0IC-96-2Ma" secondAttribute="bottom" constant="24" id="fKR-yE-v6m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwN-2p-TUb" secondAttribute="trailing" constant="20" id="jyF-Sz-vw2"/>
+                <constraint firstItem="sUb-hF-QGa" firstAttribute="top" secondItem="jel-Zx-OJn" secondAttribute="bottom" constant="18" id="phu-sB-lG0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0WN-iJ-PAJ" secondAttribute="trailing" constant="20" id="q3y-7C-IfO"/>
+                <constraint firstItem="n62-HG-AQw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="tow-Ok-ejC"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="135"/>
+        </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iRF-aQ-gTD">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="107" y="489"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="alert-close-info" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

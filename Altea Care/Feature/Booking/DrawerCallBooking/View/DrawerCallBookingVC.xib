@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawerCallBookingVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonConnect" destination="fhA-e9-BvP" id="63I-T8-E6O"/>
+                <outlet property="imageIconDoctor" destination="hD2-0x-3jZ" id="Xiy-vD-ceE"/>
+                <outlet property="labelFirstInstruction" destination="JeH-XG-2SK" id="TmN-R0-bGL"/>
+                <outlet property="labelMedicalFree" destination="D2c-OC-Cbd" id="P0L-AQ-vmV"/>
+                <outlet property="labelUserRemind" destination="d2z-1U-SGO" id="zkJ-th-ek4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="hD2-0x-3jZ">
+                    <rect key="frame" x="107" y="10" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="WnS-Hg-idh"/>
+                        <constraint firstAttribute="height" constant="200" id="Zjv-cW-rHF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeH-XG-2SK">
+                    <rect key="frame" x="30" y="230" width="354" height="100.5"/>
+                    <string key="text">Anda akan terhubung dengan Medical Advisor
+untuk memvalidasi identitas dan mengonfirmasi rencana telekonsultasi.
+Diperlukan KTP dan dokumen penunjang medis (laboratorium, radiologi, dll) bila ada yang berhubungan  dengan keluhan Anda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pastikan juga baterai dan koneksi internet stabil agar telekonsultasi berjalan lancar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2z-1U-SGO">
+                    <rect key="frame" x="30" y="350.5" width="354" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" systemColor="systemPinkColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Layanan Medical Advisor ini GRATIS." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-OC-Cbd">
+                    <rect key="frame" x="20" y="404" width="374" height="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-e9-BvP">
+                    <rect key="frame" x="30" y="436" width="354" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="Twd-Qn-4pX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <state key="normal" title="Saya Mengerti, Sambungkan"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="z6Y-5q-2L5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="pcg-08-39K"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.59999999999999998"/>
+            <constraints>
+                <constraint firstItem="JeH-XG-2SK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="21I-x8-b92"/>
+                <constraint firstItem="hD2-0x-3jZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="7ZS-p7-w1F"/>
+                <constraint firstItem="hD2-0x-3jZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Ne-1K-ZEo"/>
+                <constraint firstItem="fhA-e9-BvP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BUf-lm-wJ7"/>
+                <constraint firstItem="D2c-OC-Cbd" firstAttribute="leading" secondItem="pcg-08-39K" secondAttribute="leading" constant="20" id="K8E-Ov-LiH"/>
+                <constraint firstItem="d2z-1U-SGO" firstAttribute="top" secondItem="JeH-XG-2SK" secondAttribute="bottom" constant="20" id="LFY-jH-TPM"/>
+                <constraint firstItem="D2c-OC-Cbd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MfT-AT-xDx"/>
+                <constraint firstItem="d2z-1U-SGO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="RuE-eL-d5F"/>
+                <constraint firstItem="pcg-08-39K" firstAttribute="trailing" secondItem="D2c-OC-Cbd" secondAttribute="trailing" constant="20" id="XHd-UI-EkJ"/>
+                <constraint firstItem="JeH-XG-2SK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="ahU-ao-loD"/>
+                <constraint firstItem="fhA-e9-BvP" firstAttribute="top" secondItem="D2c-OC-Cbd" secondAttribute="bottom" constant="15" id="bhW-i6-bKW"/>
+                <constraint firstItem="pcg-08-39K" firstAttribute="trailing" secondItem="JeH-XG-2SK" secondAttribute="trailing" constant="30" id="c49-FM-sW0"/>
+                <constraint firstItem="d2z-1U-SGO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cDO-a0-Tyo"/>
+                <constraint firstItem="JeH-XG-2SK" firstAttribute="top" secondItem="hD2-0x-3jZ" secondAttribute="bottom" constant="20" id="eNr-9V-9Fd"/>
+                <constraint firstItem="D2c-OC-Cbd" firstAttribute="top" secondItem="d2z-1U-SGO" secondAttribute="bottom" constant="20" id="eh5-CX-7tL"/>
+                <constraint firstItem="fhA-e9-BvP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="fbn-l8-GLr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="callPlaceholder" width="450" height="450"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

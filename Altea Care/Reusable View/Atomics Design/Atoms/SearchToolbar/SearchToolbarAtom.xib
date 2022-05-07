@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchToolbarAtom" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="containerSearch" destination="cgX-oB-43a" id="0P2-Yx-qhg"/>
+                <outlet property="inputSearch" destination="Qir-vD-B56" id="WQf-vs-gRI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yt-oW-VK1" userLabel="Container">
+                    <rect key="frame" x="0.0" y="0.0" width="220" height="87"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgX-oB-43a" userLabel="ContainerSearch">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="87"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="mCL-Xu-KLf">
+                                    <rect key="frame" x="17" y="33.5" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="8uv-md-fFT"/>
+                                        <constraint firstAttribute="height" constant="20" id="VJQ-TR-s1e"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pencarian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-vD-B56">
+                                    <rect key="frame" x="44" y="34.5" width="159" height="18.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="mCL-Xu-KLf" firstAttribute="leading" secondItem="cgX-oB-43a" secondAttribute="leading" constant="17" id="AQz-L1-1tO"/>
+                                <constraint firstItem="mCL-Xu-KLf" firstAttribute="centerY" secondItem="cgX-oB-43a" secondAttribute="centerY" id="q94-5o-zJd"/>
+                                <constraint firstItem="Qir-vD-B56" firstAttribute="leading" secondItem="mCL-Xu-KLf" secondAttribute="trailing" constant="7" id="ru1-NJ-s0r"/>
+                                <constraint firstAttribute="trailing" secondItem="Qir-vD-B56" secondAttribute="trailing" constant="17" id="vLU-el-hPi"/>
+                                <constraint firstItem="Qir-vD-B56" firstAttribute="centerY" secondItem="cgX-oB-43a" secondAttribute="centerY" id="wwy-YG-tba"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cgX-oB-43a" secondAttribute="trailing" id="agw-hc-tHH"/>
+                        <constraint firstItem="cgX-oB-43a" firstAttribute="top" secondItem="5yt-oW-VK1" secondAttribute="top" id="kCw-3g-iX2"/>
+                        <constraint firstAttribute="bottom" secondItem="cgX-oB-43a" secondAttribute="bottom" id="mH6-tn-wOT"/>
+                        <constraint firstItem="cgX-oB-43a" firstAttribute="leading" secondItem="5yt-oW-VK1" secondAttribute="leading" id="yok-Nd-xEk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5yt-oW-VK1" secondAttribute="trailing" id="1Ar-E4-eic"/>
+                <constraint firstItem="5yt-oW-VK1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1YG-aD-2Q6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5yt-oW-VK1" secondAttribute="bottom" id="Sns-NF-zcd"/>
+                <constraint firstItem="5yt-oW-VK1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pzu-E8-CIB"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-2.8985507246376816" y="-169.08482142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

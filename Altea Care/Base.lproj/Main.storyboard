@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BF0-9g-owX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xXu-eE-rsn">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController" id="HgF-Xf-uXB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzD-XU-gaA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cf-dX-ibs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-891" y="-244"/>
+        </scene>
+        <!--Dokter Spesialis-->
+        <scene sceneID="8za-yZ-8Ce">
+            <objects>
+                <viewController id="3Et-8R-hp3" customClass="UINavigationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sRp-yG-Ufn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pVb-x9-7rZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dokter Spesialis" image="spesialis" selectedImage="spesialis" id="8S1-qi-eft"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xrf-e8-g2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="27"/>
+        </scene>
+        <!--Akun-->
+        <scene sceneID="jPl-tV-QCz">
+            <objects>
+                <viewController id="Pem-Yn-iCm" customClass="UINavigationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k8P-nE-mO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wEx-e4-tpO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Akun" image="profile" selectedImage="profile" id="rAH-HA-4BO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTa-LQ-Cbq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="27"/>
+        </scene>
+        <!--Beranda-->
+        <scene sceneID="SR9-xC-iBi">
+            <objects>
+                <viewController id="Fcz-5p-9f7" customClass="UINavigationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dlo-iR-Xgg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BDN-Ro-xbI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Beranda" image="home" selectedImage="home" id="vHa-Pw-7tu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkZ-sO-rSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="-668"/>
+        </scene>
+        <!--Telekonsultasi Saya-->
+        <scene sceneID="1ky-Rg-jj4">
+            <objects>
+                <viewController id="2O8-Bo-Ike" customClass="UINavigationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQV-ps-PM7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bnV-Xk-qri"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Telekonsultasi Saya" image="myConsultation" selectedImage="myConsultation" id="xOX-mK-CvU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WqZ-GL-Wji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="-668"/>
+        </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="pmm-aV-2wt">
+            <objects>
+                <tabBarController storyboardIdentifier="TabbarController" id="BF0-9g-owX" customClass="TabbarController" customModule="Altea_Care" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pxa-3l-xEu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.38039215686274508" green="0.7803921568627451" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Fcz-5p-9f7" kind="relationship" relationship="viewControllers" id="663-3B-tEt"/>
+                        <segue destination="3Et-8R-hp3" kind="relationship" relationship="viewControllers" id="1Bb-ti-M3S"/>
+                        <segue destination="2O8-Bo-Ike" kind="relationship" relationship="viewControllers" id="lI5-31-MUW"/>
+                        <segue destination="Pem-Yn-iCm" kind="relationship" relationship="viewControllers" id="vHW-A6-1Zv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAU-uX-Kqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-244"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="myConsultation" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="spesialis" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

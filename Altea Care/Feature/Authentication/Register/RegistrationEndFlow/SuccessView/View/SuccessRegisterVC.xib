@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuccessRegisterVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="iv" destination="RX7-r5-3LH" id="fqF-Eh-fYO"/>
+                <outlet property="label" destination="Hkj-2g-tx0" id="LGg-Zb-skx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconSuccessRegister" translatesAutoresizingMaskIntoConstraints="NO" id="RX7-r5-3LH">
+                    <rect key="frame" x="107" y="348" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Toh-bk-5pe"/>
+                        <constraint firstAttribute="height" constant="200" id="YpS-4n-DBu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selamat Registrasi Berhasil" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkj-2g-tx0">
+                    <rect key="frame" x="50" y="578" width="314" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RX7-r5-3LH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8k2-Vu-xMo"/>
+                <constraint firstItem="Hkj-2g-tx0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="GLp-SE-xzw"/>
+                <constraint firstItem="Hkj-2g-tx0" firstAttribute="top" secondItem="RX7-r5-3LH" secondAttribute="bottom" constant="30" id="TAe-ny-thA"/>
+                <constraint firstItem="Hkj-2g-tx0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WLE-0I-yYl"/>
+                <constraint firstItem="RX7-r5-3LH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fUY-Zd-Osi"/>
+            </constraints>
+            <point key="canvasLocation" x="64" y="44"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconSuccessRegister" width="107" height="82"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

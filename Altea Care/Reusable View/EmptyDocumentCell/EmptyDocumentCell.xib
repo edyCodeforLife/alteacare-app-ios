@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="202" id="KGk-i7-Jjw" customClass="EmptyDocumentCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYJ-p6-7Wb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ged-bL-Y3O">
+                                <rect key="frame" x="111.5" y="47.5" width="97" height="107"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="85w-nU-a3z">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="97"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="85w-nU-a3z" secondAttribute="height" multiplier="1:1" id="FWV-Pj-oHg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n78-4r-biB" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                                        <rect key="frame" x="48.5" y="107" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ged-bL-Y3O" firstAttribute="centerX" secondItem="SYJ-p6-7Wb" secondAttribute="centerX" id="9Gc-h1-dEl"/>
+                            <constraint firstItem="ged-bL-Y3O" firstAttribute="centerY" secondItem="SYJ-p6-7Wb" secondAttribute="centerY" id="Wl0-9G-Kv8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SYJ-p6-7Wb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AR6-Z0-iNN"/>
+                    <constraint firstAttribute="bottom" secondItem="SYJ-p6-7Wb" secondAttribute="bottom" id="F8L-c9-gy1"/>
+                    <constraint firstItem="SYJ-p6-7Wb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QTr-sn-AiB"/>
+                    <constraint firstAttribute="trailing" secondItem="SYJ-p6-7Wb" secondAttribute="trailing" id="Vlc-LW-cOO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="SYJ-p6-7Wb" id="8dK-iJ-OSL"/>
+                <outlet property="imageIcon" destination="85w-nU-a3z" id="uxz-4A-rtO"/>
+                <outlet property="label" destination="n78-4r-biB" id="aPe-W1-uNQ"/>
+            </connections>
+            <point key="canvasLocation" x="-139.13043478260872" y="127.90178571428571"/>
+        </tableViewCell>
+    </objects>
+</document>

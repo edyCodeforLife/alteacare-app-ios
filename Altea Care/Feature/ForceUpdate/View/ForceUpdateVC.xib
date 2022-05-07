@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForceUpdateVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonUpdate" destination="SVR-hx-hhh" id="gzU-dw-plh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-Iq-zn0">
+                    <rect key="frame" x="137" y="54" width="140" height="20"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-alteacare" translatesAutoresizingMaskIntoConstraints="NO" id="WLA-Ru-cat">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="ZaW-uo-vHW"/>
+                                <constraint firstAttribute="width" constant="70" id="hom-i2-ijI"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-kemenkes" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-Zb-gLC">
+                            <rect key="frame" x="70" y="0.0" width="70" height="20"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Hd3-Zb-gLC" firstAttribute="width" secondItem="WLA-Ru-cat" secondAttribute="width" id="8sP-Vl-s4N"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laB-mr-dXe" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="114" width="364" height="450"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IVForceUpdate" translatesAutoresizingMaskIntoConstraints="NO" id="WrR-27-QHi">
+                            <rect key="frame" x="63.5" y="30" width="237" height="144"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perbaharui Aplikasi AlteaCare Anda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ0-PI-DwF">
+                            <rect key="frame" x="20" y="194" width="324" height="21.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silakan perbarui aplikasi AlteaCare Anda untuk mendapatkan layanan yang lebih baik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNv-Wf-bIn">
+                            <rect key="frame" x="20" y="245.5" width="324" height="34"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVR-hx-hhh">
+                            <rect key="frame" x="97" y="368" width="170" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="170" id="OYU-vr-r5d"/>
+                                <constraint firstAttribute="height" constant="52" id="c9M-Yo-UD2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Perbarui Aplikasi"/>
+                            <connections>
+                                <action selector="updateTapped:" destination="-1" eventType="touchUpInside" id="Atx-3V-TGl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ZNv-Wf-bIn" firstAttribute="leading" secondItem="laB-mr-dXe" secondAttribute="leading" constant="20" id="0xZ-g5-MUA"/>
+                        <constraint firstItem="WrR-27-QHi" firstAttribute="centerX" secondItem="laB-mr-dXe" secondAttribute="centerX" id="5aB-Bp-ygy"/>
+                        <constraint firstItem="jZ0-PI-DwF" firstAttribute="top" secondItem="WrR-27-QHi" secondAttribute="bottom" constant="20" id="6aF-s6-yEE"/>
+                        <constraint firstItem="jZ0-PI-DwF" firstAttribute="leading" secondItem="laB-mr-dXe" secondAttribute="leading" constant="20" id="6pr-Bu-jS0"/>
+                        <constraint firstItem="SVR-hx-hhh" firstAttribute="centerX" secondItem="laB-mr-dXe" secondAttribute="centerX" id="Cfk-2F-W9a"/>
+                        <constraint firstAttribute="height" constant="450" id="FLe-0N-xgK"/>
+                        <constraint firstAttribute="trailing" secondItem="ZNv-Wf-bIn" secondAttribute="trailing" constant="20" id="Rpt-gA-do1"/>
+                        <constraint firstItem="WrR-27-QHi" firstAttribute="top" secondItem="laB-mr-dXe" secondAttribute="top" constant="30" id="ZZO-Ds-Mfd"/>
+                        <constraint firstItem="ZNv-Wf-bIn" firstAttribute="top" secondItem="jZ0-PI-DwF" secondAttribute="bottom" constant="30" id="ph9-rE-Rhq"/>
+                        <constraint firstAttribute="bottom" secondItem="SVR-hx-hhh" secondAttribute="bottom" constant="30" id="tCI-zO-DAw"/>
+                        <constraint firstAttribute="trailing" secondItem="jZ0-PI-DwF" secondAttribute="trailing" constant="20" id="uYe-Ap-3lu"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="PmN-Iq-zn0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="GsE-Cj-U3d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="laB-mr-dXe" secondAttribute="trailing" constant="25" id="MrL-5s-til"/>
+                <constraint firstItem="laB-mr-dXe" firstAttribute="top" secondItem="PmN-Iq-zn0" secondAttribute="bottom" constant="40" id="QPC-7e-PEb"/>
+                <constraint firstItem="PmN-Iq-zn0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tVD-hl-okF"/>
+                <constraint firstItem="laB-mr-dXe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="yHp-fC-LBl"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IVForceUpdate" width="237" height="144"/>
+        <image name="ic-kemenkes" width="63.5" height="28"/>
+        <image name="logo-alteacare" width="112.5" height="32"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

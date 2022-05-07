@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReconsultationVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="LOT-Ek-aGM" id="o0f-VI-JoK"/>
+                <outlet property="headerLabel" destination="RDC-8h-hJf" id="HMn-Gr-fa6"/>
+                <outlet property="infoLabel" destination="oC5-ze-S3c" id="Z6P-a8-KUc"/>
+                <outlet property="problemLabel" destination="ZPl-N2-ufR" id="D10-Aa-zlc"/>
+                <outlet property="reconsultationButton" destination="W3I-HY-DJw" id="UFI-TN-v1D"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telekonsultasi Ulang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDC-8h-hJf" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="101" y="20" width="173" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" red="0.21960784310000001" green="0.40784313729999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_reconsultation" translatesAutoresizingMaskIntoConstraints="NO" id="M5n-OU-jtr">
+                    <rect key="frame" x="87.5" y="101" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="XL0-Eh-ef9"/>
+                        <constraint firstAttribute="height" constant="200" id="d2Q-Pp-WCg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telekonsultasi terakhir anda terkendala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPl-N2-ufR" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="23.5" y="321" width="328.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" red="0.41960784313725491" green="0.45882352941176469" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pastikan baterai dan koneksi internet stabil agar telekonsultasi berjalan lancar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oC5-ze-S3c" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="392" width="325" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOT-Ek-aGM" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="602" width="325" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="mmO-OK-8IC"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3I-HY-DJw" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="552" width="325" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="OTT-Hb-m7S"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYN-s6-7P3">
+                    <rect key="frame" x="20" y="23" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="Bh7-Du-Hf8"/>
+                        <constraint firstAttribute="height" constant="15" id="Em1-jU-Uh9"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic_close_alt" title=" "/>
+                    <connections>
+                        <action selector="onCloseTapped:" destination="-1" eventType="touchUpInside" id="rQT-JW-Dtn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oC5-ze-S3c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0rP-WC-oCi"/>
+                <constraint firstItem="FYN-s6-7P3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="4My-Lr-APe"/>
+                <constraint firstItem="LOT-Ek-aGM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="5Lg-4l-lw2"/>
+                <constraint firstItem="FYN-s6-7P3" firstAttribute="centerY" secondItem="RDC-8h-hJf" secondAttribute="centerY" id="5kM-dy-ROQ"/>
+                <constraint firstItem="RDC-8h-hJf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Eke-Wn-I1E"/>
+                <constraint firstAttribute="trailing" secondItem="oC5-ze-S3c" secondAttribute="trailing" constant="25" id="NSL-Mt-zSE"/>
+                <constraint firstItem="W3I-HY-DJw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Q06-0z-YWT"/>
+                <constraint firstItem="oC5-ze-S3c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="RPG-BP-fiI"/>
+                <constraint firstItem="oC5-ze-S3c" firstAttribute="top" secondItem="ZPl-N2-ufR" secondAttribute="bottom" constant="50" id="Sc2-c8-Ayh"/>
+                <constraint firstItem="ZPl-N2-ufR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xxw-2p-nlR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LOT-Ek-aGM" secondAttribute="trailing" constant="25" id="dYd-iH-vPh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W3I-HY-DJw" secondAttribute="trailing" constant="25" id="fzy-Ot-KEw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LOT-Ek-aGM" secondAttribute="bottom" constant="20" id="ohp-tF-bH1"/>
+                <constraint firstItem="M5n-OU-jtr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rP4-Mj-01K"/>
+                <constraint firstItem="ZPl-N2-ufR" firstAttribute="top" secondItem="M5n-OU-jtr" secondAttribute="bottom" constant="20" id="sQA-Iy-G2C"/>
+                <constraint firstItem="RDC-8h-hJf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uod-Lf-RQv"/>
+                <constraint firstItem="LOT-Ek-aGM" firstAttribute="top" secondItem="W3I-HY-DJw" secondAttribute="bottom" constant="5" id="xek-DP-9DH"/>
+                <constraint firstItem="M5n-OU-jtr" firstAttribute="top" secondItem="RDC-8h-hJf" secondAttribute="bottom" constant="60" id="yye-DT-Xtv"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="91.304347826086968"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close_alt" width="12" height="12"/>
+        <image name="ic_reconsultation" width="194" height="194"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

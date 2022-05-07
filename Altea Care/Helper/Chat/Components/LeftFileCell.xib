@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LeftFileCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsb-Um-Fb4" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                        <rect key="frame" x="13" y="3" width="104.5" height="33"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tZh-0S-GFp">
+                                <rect key="frame" x="13" y="0.0" width="78.5" height="33"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-doc" translatesAutoresizingMaskIntoConstraints="NO" id="UqH-r8-sMy">
+                                        <rect key="frame" x="0.0" y="6.5" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="YOi-cd-ZtA"/>
+                                            <constraint firstAttribute="width" constant="20" id="sT2-Py-bhe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="File.pdf" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVC-8g-kyw" customClass="ACLabel" customModule="Altea_Care" customModuleProvider="target">
+                                        <rect key="frame" x="29" y="8" width="49.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                        <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83921568629999999" green="0.92941176469999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="HCb-0r-Jdh"/>
+                            <constraint firstItem="tZh-0S-GFp" firstAttribute="top" secondItem="jsb-Um-Fb4" secondAttribute="top" id="If3-yF-rTv"/>
+                            <constraint firstAttribute="bottom" secondItem="tZh-0S-GFp" secondAttribute="bottom" id="PI5-GO-YFM"/>
+                            <constraint firstItem="tZh-0S-GFp" firstAttribute="leading" secondItem="jsb-Um-Fb4" secondAttribute="leading" constant="13" id="lkE-Z8-m7v"/>
+                            <constraint firstAttribute="trailing" secondItem="tZh-0S-GFp" secondAttribute="trailing" constant="13" id="sjZ-lT-Ez5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jsb-Um-Fb4" secondAttribute="bottom" constant="3" id="67v-v4-nI4"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jsb-Um-Fb4" secondAttribute="trailing" constant="13" id="GV8-9B-WQg"/>
+                    <constraint firstItem="jsb-Um-Fb4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="K3v-TY-gDp"/>
+                    <constraint firstItem="jsb-Um-Fb4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="yU5-Xh-eZc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bubbleChatView" destination="jsb-Um-Fb4" id="UiM-3P-GpE"/>
+                <outlet property="fileNameL" destination="EVC-8g-kyw" id="UAq-5v-6KN"/>
+            </connections>
+            <point key="canvasLocation" x="71" y="109"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-doc" width="16" height="20"/>
+    </resources>
+</document>

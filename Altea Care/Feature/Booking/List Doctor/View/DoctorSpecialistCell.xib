@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DoctorSpecialistCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFV-qc-kwe" customClass="CardView" customModule="Altea_Care" customModuleProvider="target">
+                        <rect key="frame" x="20" y="10" width="280" height="173"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctorPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Foy-JA-PpX">
+                                <rect key="frame" x="14" y="14" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="RhD-p7-tek"/>
+                                    <constraint firstAttribute="height" constant="80" id="n3y-IP-iG7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-0e-D99" customClass="CardView" customModule="Altea_Care" customModuleProvider="target">
+                                <rect key="frame" x="102" y="14" width="130" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Tahun Pengalaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odv-dS-fCe">
+                                        <rect key="frame" x="12.5" y="4" width="105" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.1750493944" green="0.3163197935" blue="0.54512560369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83962088820000003" green="0.92878079410000003" blue="0.96471434830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9cM-dm-RIh"/>
+                                    <constraint firstItem="odv-dS-fCe" firstAttribute="centerX" secondItem="fVy-0e-D99" secondAttribute="centerX" id="dH2-P7-qBs"/>
+                                    <constraint firstAttribute="width" constant="130" id="k3b-KN-9da"/>
+                                    <constraint firstItem="odv-dS-fCe" firstAttribute="centerY" secondItem="fVy-0e-D99" secondAttribute="centerY" id="pEd-Zz-soK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconMitraKeluarga" translatesAutoresizingMaskIntoConstraints="NO" id="89D-xO-Mix">
+                                <rect key="frame" x="103" y="38" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="gpn-12-81D"/>
+                                    <constraint firstAttribute="height" constant="20" id="rMF-f7-BJF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RS. MIKA Bintaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-4e-Reb">
+                                <rect key="frame" x="129" y="42" width="82" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bahasa, English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laS-bp-D94">
+                                <rect key="frame" x="102" y="82" width="76" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sp. Anak - Endokrinologi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G2-dc-sYy">
+                                <rect key="frame" x="14" y="104" width="149" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.2259321809" green="0.39929902550000002" blue="0.61571443079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tentang dokter Tent Tentang do..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNn-NH-QyS">
+                                <rect key="frame" x="14" y="126.5" width="142" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cup-Ze-j4i" customClass="CardView" customModule="Altea_Care" customModuleProvider="target">
+                                <rect key="frame" x="166" y="104" width="100" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Jadwal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWm-xl-OSt">
+                                        <rect key="frame" x="17" y="8" width="66.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.42107954619999999" green="0.81653225419999997" blue="0.74901944399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SsA-K9-nhZ"/>
+                                    <constraint firstItem="gWm-xl-OSt" firstAttribute="centerX" secondItem="Cup-Ze-j4i" secondAttribute="centerX" id="ffd-qr-Swm"/>
+                                    <constraint firstAttribute="width" constant="100" id="tUq-8W-2JR"/>
+                                    <constraint firstItem="gWm-xl-OSt" firstAttribute="centerY" secondItem="Cup-Ze-j4i" secondAttribute="centerY" id="yrz-Fr-YrD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp.200.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mc-ej-kKN">
+                                <rect key="frame" x="180" y="79.5" width="72" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.2259321809" green="0.39929902550000002" blue="0.61571443079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dr. Cindy Simangunson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-Ej-iM3">
+                                <rect key="frame" x="102" y="58" width="140" height="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fVy-0e-D99" firstAttribute="leading" secondItem="Foy-JA-PpX" secondAttribute="trailing" constant="8" id="4Gz-Nf-pqo"/>
+                            <constraint firstAttribute="trailing" secondItem="Cup-Ze-j4i" secondAttribute="trailing" constant="14" id="6Rf-hE-n6E"/>
+                            <constraint firstItem="2G2-dc-sYy" firstAttribute="top" secondItem="Foy-JA-PpX" secondAttribute="bottom" constant="10" id="6jg-rf-MJ3"/>
+                            <constraint firstItem="5rb-4e-Reb" firstAttribute="leading" secondItem="89D-xO-Mix" secondAttribute="trailing" constant="6" id="7pr-kt-Nee"/>
+                            <constraint firstItem="iNn-NH-QyS" firstAttribute="top" secondItem="2G2-dc-sYy" secondAttribute="bottom" constant="8" id="9cG-Oe-5JU"/>
+                            <constraint firstItem="Cup-Ze-j4i" firstAttribute="top" secondItem="2G2-dc-sYy" secondAttribute="top" id="Dd8-Bk-cgC"/>
+                            <constraint firstItem="89D-xO-Mix" firstAttribute="leading" secondItem="Foy-JA-PpX" secondAttribute="trailing" constant="9" id="FHR-aa-XWy"/>
+                            <constraint firstItem="AFc-Ej-iM3" firstAttribute="top" secondItem="89D-xO-Mix" secondAttribute="bottom" id="LBC-Nw-Ujt"/>
+                            <constraint firstItem="Cup-Ze-j4i" firstAttribute="leading" secondItem="iNn-NH-QyS" secondAttribute="trailing" constant="10" id="LRt-sl-IaC"/>
+                            <constraint firstItem="2G2-dc-sYy" firstAttribute="leading" secondItem="aFV-qc-kwe" secondAttribute="leading" constant="14" id="NBw-6c-jdK"/>
+                            <constraint firstItem="laS-bp-D94" firstAttribute="bottom" secondItem="Foy-JA-PpX" secondAttribute="bottom" id="Oni-27-rwQ"/>
+                            <constraint firstItem="7mc-ej-kKN" firstAttribute="bottom" secondItem="laS-bp-D94" secondAttribute="bottom" id="QVv-TB-3td"/>
+                            <constraint firstItem="Foy-JA-PpX" firstAttribute="leading" secondItem="aFV-qc-kwe" secondAttribute="leading" constant="14" id="Url-3f-lQ9"/>
+                            <constraint firstItem="Foy-JA-PpX" firstAttribute="top" secondItem="aFV-qc-kwe" secondAttribute="top" constant="14" id="Vhg-sH-8NF"/>
+                            <constraint firstItem="laS-bp-D94" firstAttribute="leading" secondItem="Foy-JA-PpX" secondAttribute="trailing" constant="8" id="aWJ-li-99C"/>
+                            <constraint firstItem="AFc-Ej-iM3" firstAttribute="leading" secondItem="Foy-JA-PpX" secondAttribute="trailing" constant="8" id="bfg-DO-qw6"/>
+                            <constraint firstItem="iNn-NH-QyS" firstAttribute="leading" secondItem="aFV-qc-kwe" secondAttribute="leading" constant="14" id="bkl-T7-yBy"/>
+                            <constraint firstItem="fVy-0e-D99" firstAttribute="top" secondItem="Foy-JA-PpX" secondAttribute="top" id="eE7-es-zzC"/>
+                            <constraint firstItem="5rb-4e-Reb" firstAttribute="centerY" secondItem="89D-xO-Mix" secondAttribute="centerY" id="eI2-3U-fkI"/>
+                            <constraint firstItem="89D-xO-Mix" firstAttribute="top" secondItem="fVy-0e-D99" secondAttribute="bottom" constant="4" id="vkz-qE-bOT"/>
+                            <constraint firstItem="7mc-ej-kKN" firstAttribute="centerX" secondItem="Cup-Ze-j4i" secondAttribute="centerX" id="wDu-aw-gL3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aFV-qc-kwe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CUu-Tt-wH7"/>
+                    <constraint firstAttribute="bottom" secondItem="aFV-qc-kwe" secondAttribute="bottom" constant="10" id="Nud-1k-t8J"/>
+                    <constraint firstItem="aFV-qc-kwe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Und-74-28u"/>
+                    <constraint firstAttribute="trailing" secondItem="aFV-qc-kwe" secondAttribute="trailing" constant="20" id="nVq-mC-Ept"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageDoctor" destination="Foy-JA-PpX" id="4oa-3B-77E"/>
+                <outlet property="imageMika" destination="89D-xO-Mix" id="Aug-gA-oWP"/>
+                <outlet property="labelDoctorDescription" destination="iNn-NH-QyS" id="g62-E4-gyO"/>
+                <outlet property="labelExperience" destination="odv-dS-fCe" id="Ijm-tl-0mk"/>
+                <outlet property="labelLanguangeList" destination="laS-bp-D94" id="2Pb-O8-88b"/>
+                <outlet property="labelNameDoctor" destination="AFc-Ej-iM3" id="8UH-Xl-Al6"/>
+                <outlet property="labelNameHospital" destination="5rb-4e-Reb" id="6dJ-bS-dyt"/>
+                <outlet property="labelPriceBooking" destination="7mc-ej-kKN" id="wke-Qi-Syn"/>
+                <outlet property="labelSpecialistDoctor" destination="2G2-dc-sYy" id="gaf-77-fRv"/>
+            </connections>
+            <point key="canvasLocation" x="-178.2608695652174" y="287.61160714285711"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="IconMitraKeluarga" width="24" height="24"/>
+        <image name="doctorPlaceholder" width="182" height="182"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

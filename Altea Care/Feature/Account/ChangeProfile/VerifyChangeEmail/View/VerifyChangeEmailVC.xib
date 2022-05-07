@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyChangeEmailVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonCloseContainer" destination="jXC-oF-ddi" id="vLa-39-I3w"/>
+                <outlet property="imageExclamation" destination="Ub8-3B-Teg" id="aMf-cp-lK6"/>
+                <outlet property="labelCounter" destination="mkC-9a-Z5P" id="0Hn-v2-eXK"/>
+                <outlet property="labelInstruction" destination="f1z-iZ-9un" id="Xfi-CT-9Iu"/>
+                <outlet property="labelResendCode" destination="CV0-fS-gGD" id="clm-f7-2IP"/>
+                <outlet property="labelWarningExclamation" destination="kJf-wB-72a" id="dnk-05-ACF"/>
+                <outlet property="messageView" destination="Fng-Hi-7ib" id="qlC-fh-p18"/>
+                <outlet property="otpTextField" destination="e5m-4R-Pvq" id="GbC-Kh-jnk"/>
+                <outlet property="sendOtpButton" destination="zCh-6w-oXd" id="CWg-KP-XZe"/>
+                <outlet property="sendOtpView" destination="Udw-cj-NvH" id="S8A-ND-JAL"/>
+                <outlet property="view" destination="bvo-9q-uKl" id="qsE-Eo-6gM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bvo-9q-uKl">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kode verifikasi telah dikirim via alamat email ke " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-iZ-9un">
+                    <rect key="frame" x="25" y="123" width="364" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kode verifikasi salah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-wB-72a">
+                    <rect key="frame" x="153.5" y="216" width="107.5" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ub8-3B-Teg">
+                    <rect key="frame" x="127.5" y="212.5" width="18" height="17"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="afO-tA-llJ"/>
+                        <constraint firstAttribute="height" constant="18" id="zBT-we-usO"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkC-9a-Z5P">
+                    <rect key="frame" x="181" y="232" width="52" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.2259321809" green="0.39929902550000002" blue="0.61571443079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fng-Hi-7ib">
+                    <rect key="frame" x="0.0" y="816" width="414" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inform-success-icon" translatesAutoresizingMaskIntoConstraints="NO" id="2kB-jP-1OH">
+                            <rect key="frame" x="18" y="17.5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="NsV-l9-3Ho"/>
+                                <constraint firstAttribute="height" constant="25" id="xpB-TK-a8W"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email verifikasi telah dikirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWz-Ht-moQ">
+                            <rect key="frame" x="55" y="21" width="188.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXC-oF-ddi">
+                            <rect key="frame" x="382" y="19" width="12" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="Ic1-4F-N8G"/>
+                                <constraint firstAttribute="height" constant="22" id="XHd-Hc-Ioh"/>
+                            </constraints>
+                            <state key="normal" image="alert-close"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2259321809" green="0.39929902550000002" blue="0.61571443079999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="jXC-oF-ddi" secondAttribute="trailing" constant="20" id="5X7-o8-qVK"/>
+                        <constraint firstItem="jWz-Ht-moQ" firstAttribute="leading" secondItem="2kB-jP-1OH" secondAttribute="trailing" constant="12" id="5eH-pq-VdO"/>
+                        <constraint firstAttribute="width" secondItem="Fng-Hi-7ib" secondAttribute="height" multiplier="69:10" constant="-138" id="E4d-x1-J49"/>
+                        <constraint firstItem="jXC-oF-ddi" firstAttribute="centerY" secondItem="Fng-Hi-7ib" secondAttribute="centerY" constant="-10" id="GxG-AF-FQR"/>
+                        <constraint firstItem="2kB-jP-1OH" firstAttribute="centerY" secondItem="Fng-Hi-7ib" secondAttribute="centerY" constant="-9.8333333333333712" id="iD4-8R-kwA"/>
+                        <constraint firstItem="2kB-jP-1OH" firstAttribute="leading" secondItem="Fng-Hi-7ib" secondAttribute="leading" constant="18" id="l3g-9k-iXi"/>
+                        <constraint firstItem="jWz-Ht-moQ" firstAttribute="centerY" secondItem="2kB-jP-1OH" secondAttribute="centerY" id="p8I-8h-PMM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5m-4R-Pvq" customClass="PinCodeTextField" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="25" y="150" width="364" height="61"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="61" id="MMq-vd-v6L"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                            <color key="value" red="0.24313725489999999" green="0.54901960780000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="updatedUnderlineColor">
+                            <color key="value" red="0.24313725489999999" green="0.54901960780000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineWidth">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineHSpacing">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineVMargin">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="underlineHeight">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="secureText" value="NO"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udw-cj-NvH">
+                    <rect key="frame" x="85" y="276" width="244" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tidak menerima email ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV0-fS-gGD">
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCh-6w-oXd">
+                            <rect key="frame" x="165" y="0.0" width="79" height="30"/>
+                            <state key="normal" title="Kirim Ulang">
+                                <color key="titleColor" red="0.38039215686274508" green="0.7803921568627451" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3w3-Ad-V36"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="f1z-iZ-9un" firstAttribute="leading" secondItem="3w3-Ad-V36" secondAttribute="leading" constant="25" id="2KI-8k-49f"/>
+                <constraint firstItem="e5m-4R-Pvq" firstAttribute="leading" secondItem="3w3-Ad-V36" secondAttribute="leading" constant="25" id="8nb-xc-jEr"/>
+                <constraint firstItem="e5m-4R-Pvq" firstAttribute="top" secondItem="f1z-iZ-9un" secondAttribute="bottom" constant="10" id="9Sq-Jd-QNB"/>
+                <constraint firstItem="mkC-9a-Z5P" firstAttribute="top" secondItem="kJf-wB-72a" secondAttribute="bottom" constant="6" id="CNG-NL-axQ"/>
+                <constraint firstItem="3w3-Ad-V36" firstAttribute="trailing" secondItem="e5m-4R-Pvq" secondAttribute="trailing" constant="25" id="ENb-dK-TWV"/>
+                <constraint firstItem="kJf-wB-72a" firstAttribute="centerX" secondItem="bvo-9q-uKl" secondAttribute="centerX" id="I7P-Q8-mGC"/>
+                <constraint firstItem="mkC-9a-Z5P" firstAttribute="centerX" secondItem="bvo-9q-uKl" secondAttribute="centerX" id="JOU-Bx-OmL"/>
+                <constraint firstAttribute="bottom" secondItem="Fng-Hi-7ib" secondAttribute="bottom" id="JTS-jw-2Sp"/>
+                <constraint firstItem="kJf-wB-72a" firstAttribute="leading" secondItem="Ub8-3B-Teg" secondAttribute="trailing" constant="8" id="N4f-lc-ccw"/>
+                <constraint firstItem="Ub8-3B-Teg" firstAttribute="firstBaseline" secondItem="kJf-wB-72a" secondAttribute="firstBaseline" id="Sfr-eo-mEn"/>
+                <constraint firstItem="f1z-iZ-9un" firstAttribute="top" secondItem="3w3-Ad-V36" secondAttribute="top" constant="79" id="VhQ-jX-BKH"/>
+                <constraint firstItem="Fng-Hi-7ib" firstAttribute="leading" secondItem="3w3-Ad-V36" secondAttribute="leading" id="X8T-zQ-jVX"/>
+                <constraint firstItem="kJf-wB-72a" firstAttribute="top" secondItem="e5m-4R-Pvq" secondAttribute="bottom" constant="5" id="cHn-UU-Z1V"/>
+                <constraint firstItem="3w3-Ad-V36" firstAttribute="trailing" secondItem="f1z-iZ-9un" secondAttribute="trailing" constant="25" id="d3p-Ly-SAc"/>
+                <constraint firstItem="3w3-Ad-V36" firstAttribute="trailing" secondItem="Fng-Hi-7ib" secondAttribute="trailing" id="qpy-Mt-F4l"/>
+                <constraint firstItem="Udw-cj-NvH" firstAttribute="top" secondItem="kJf-wB-72a" secondAttribute="bottom" constant="50" id="suv-UN-DOM"/>
+                <constraint firstItem="Udw-cj-NvH" firstAttribute="centerX" secondItem="bvo-9q-uKl" secondAttribute="centerX" id="tG6-6B-WkT"/>
+                <constraint firstItem="kJf-wB-72a" firstAttribute="centerY" secondItem="Ub8-3B-Teg" secondAttribute="centerY" id="tSx-Uk-TXZ"/>
+            </constraints>
+            <point key="canvasLocation" x="98.550724637681171" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alert-close" width="12" height="12"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <image name="inform-success-icon" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

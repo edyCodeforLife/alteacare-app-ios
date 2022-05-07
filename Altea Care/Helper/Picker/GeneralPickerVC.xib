@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="overpass-regular.otf">
+            <string>Overpass-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneralPickerVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="contentUV" destination="vpy-Uj-f3U" id="1os-Ew-OLA"/>
+                <outlet property="searchTF" destination="nqz-ha-M6f" id="IjM-97-xdd"/>
+                <outlet property="searchUV" destination="sth-fA-DXR" id="Wng-2A-Kjx"/>
+                <outlet property="selectB" destination="8Ih-IR-MRG" id="kfx-nr-HjB"/>
+                <outlet property="titleL" destination="xSb-Jg-ZL6" id="aTb-2N-Fci"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU7-eH-nIS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Tanggal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-Jg-ZL6">
+                            <rect key="frame" x="157" y="16" width="100" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CHa-Bx-6UF">
+                            <rect key="frame" x="16" y="51.5" width="382" height="231.5"/>
+                            <subviews>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sth-fA-DXR" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Masukan pencarian..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqz-ha-M6f">
+                                            <rect key="frame" x="32" y="0.0" width="340" height="36"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                    <color key="value" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="Hoj-Jc-4ge">
+                                            <rect key="frame" x="10" y="11" width="14" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="14" id="96c-qx-bc1"/>
+                                                <constraint firstAttribute="height" constant="14" id="PmT-Zx-Go0"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                    <color key="value" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nqz-ha-M6f" secondAttribute="trailing" constant="10" id="0hR-U2-ECP"/>
+                                        <constraint firstItem="Hoj-Jc-4ge" firstAttribute="leading" secondItem="sth-fA-DXR" secondAttribute="leading" constant="10" id="2DW-ht-H8g"/>
+                                        <constraint firstItem="nqz-ha-M6f" firstAttribute="top" secondItem="sth-fA-DXR" secondAttribute="top" id="6Av-Ye-Fsc"/>
+                                        <constraint firstAttribute="bottom" secondItem="nqz-ha-M6f" secondAttribute="bottom" id="758-s0-g92"/>
+                                        <constraint firstItem="nqz-ha-M6f" firstAttribute="leading" secondItem="Hoj-Jc-4ge" secondAttribute="trailing" constant="8" id="JJ1-Mq-IGA"/>
+                                        <constraint firstAttribute="height" constant="36" id="Wc9-do-HGa"/>
+                                        <constraint firstItem="Hoj-Jc-4ge" firstAttribute="centerY" secondItem="sth-fA-DXR" secondAttribute="centerY" id="djf-0q-5lN"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpy-Uj-f3U" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="231.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mKp-bd-Bjx">
+                            <rect key="frame" x="16" y="299" width="382" height="47"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NW-kD-BSS">
+                                    <rect key="frame" x="0.0" y="0.0" width="183" height="47"/>
+                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="11"/>
+                                    <state key="normal" title="BATAL">
+                                        <color key="titleColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="fWe-hb-JSv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ih-IR-MRG">
+                                    <rect key="frame" x="199" y="0.0" width="183" height="47"/>
+                                    <color key="backgroundColor" red="0.38039215686274508" green="0.7803921568627451" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="11"/>
+                                    <state key="normal" title="PILIH">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="chooseTapped:" destination="-1" eventType="touchUpInside" id="iVw-sP-lCs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="mSy-ug-ZTh"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mKp-bd-Bjx" secondAttribute="trailing" constant="16" id="EAY-kk-1Ci"/>
+                        <constraint firstItem="CHa-Bx-6UF" firstAttribute="top" secondItem="xSb-Jg-ZL6" secondAttribute="bottom" constant="16" id="HFE-PT-FXz"/>
+                        <constraint firstItem="xSb-Jg-ZL6" firstAttribute="centerX" secondItem="SU7-eH-nIS" secondAttribute="centerX" id="PzR-34-HxW"/>
+                        <constraint firstItem="xSb-Jg-ZL6" firstAttribute="top" secondItem="SU7-eH-nIS" secondAttribute="top" constant="16" id="ZPK-OE-dYp"/>
+                        <constraint firstAttribute="trailing" secondItem="CHa-Bx-6UF" secondAttribute="trailing" constant="16" id="hWv-hu-l4V"/>
+                        <constraint firstItem="mKp-bd-Bjx" firstAttribute="leading" secondItem="SU7-eH-nIS" secondAttribute="leading" constant="16" id="ibB-b3-xzL"/>
+                        <constraint firstItem="mKp-bd-Bjx" firstAttribute="top" secondItem="CHa-Bx-6UF" secondAttribute="bottom" constant="16" id="nOK-Iv-pAX"/>
+                        <constraint firstAttribute="bottom" secondItem="mKp-bd-Bjx" secondAttribute="bottom" constant="33" id="sHh-uM-Ves"/>
+                        <constraint firstItem="CHa-Bx-6UF" firstAttribute="leading" secondItem="SU7-eH-nIS" secondAttribute="leading" constant="16" id="ueP-7v-kEm"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="379" id="z4J-5o-OvZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="SU7-eH-nIS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9fc-5L-t6w"/>
+                <constraint firstItem="SU7-eH-nIS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SOw-RH-LxZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SU7-eH-nIS" secondAttribute="trailing" id="Usf-AY-qAp"/>
+                <constraint firstAttribute="bottom" secondItem="SU7-eH-nIS" secondAttribute="bottom" id="Xjw-Rn-CA1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="147.82608695652175" y="144.97767857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

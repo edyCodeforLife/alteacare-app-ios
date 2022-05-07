@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleButtonBackground" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="IRl-dI-DoU" id="zf7-h0-uSa"/>
+                <outlet property="leadingMarginButton" destination="7F3-xv-F2O" id="zz9-nm-7an"/>
+                <outlet property="titleButton" destination="egx-YN-byB" id="WBr-zf-T9T"/>
+                <outlet property="trailingMarginButton" destination="rJt-aH-wr8" id="9IN-FR-CYC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="179"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRl-dI-DoU">
+                    <rect key="frame" x="0.0" y="0.0" width="453" height="145"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egx-YN-byB">
+                            <rect key="frame" x="0.0" y="0.0" width="453" height="145"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.83921568627450982" green="0.92941176470588238" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="egx-YN-byB" firstAttribute="leading" secondItem="IRl-dI-DoU" secondAttribute="leading" id="7F3-xv-F2O"/>
+                        <constraint firstAttribute="bottom" secondItem="egx-YN-byB" secondAttribute="bottom" id="T1f-Og-OCL"/>
+                        <constraint firstItem="egx-YN-byB" firstAttribute="top" secondItem="IRl-dI-DoU" secondAttribute="top" id="bYW-NK-L2z"/>
+                        <constraint firstAttribute="trailing" secondItem="egx-YN-byB" secondAttribute="trailing" id="rJt-aH-wr8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IRl-dI-DoU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3hb-9O-qDV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IRl-dI-DoU" secondAttribute="trailing" id="4IT-Da-drw"/>
+                <constraint firstItem="IRl-dI-DoU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7EQ-SK-oEL"/>
+                <constraint firstItem="IRl-dI-DoU" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="rLQ-h5-xsQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="165.94202898550725" y="-138.28125"/>
+        </view>
+    </objects>
+</document>

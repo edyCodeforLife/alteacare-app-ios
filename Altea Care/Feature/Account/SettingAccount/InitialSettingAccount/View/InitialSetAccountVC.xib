@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialSetAccountVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="changePasswordButton" destination="4A2-IU-DHy" id="KBi-5R-3q1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cco-Q6-tRx">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubah Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpU-dF-QNm">
+                            <rect key="frame" x="24" y="11" width="114" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="0.1750493944" green="0.3163197935" blue="0.54512560369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9216315746" green="0.92124152179999996" blue="0.94118005039999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="jpU-dF-QNm" firstAttribute="centerY" secondItem="cco-Q6-tRx" secondAttribute="centerY" id="UfK-bZ-8GR"/>
+                        <constraint firstAttribute="height" constant="40" id="nIk-Gu-jOe"/>
+                        <constraint firstItem="jpU-dF-QNm" firstAttribute="leading" secondItem="cco-Q6-tRx" secondAttribute="leading" constant="24" id="pyS-Oc-If9"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9D-46-kfl">
+                    <rect key="frame" x="24" y="94" width="66" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A2-IU-DHy">
+                    <rect key="frame" x="346" y="94" width="44" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="UBAH">
+                        <color key="titleColor" red="0.38191315529999997" green="0.78129285569999996" blue="0.7098030448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="changeButtonTapped:" destination="-1" eventType="touchUpInside" id="8m2-ra-c5v"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cco-Q6-tRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1oF-qD-Kq0"/>
+                <constraint firstItem="S9D-46-kfl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="2F5-F2-wAX"/>
+                <constraint firstItem="S9D-46-kfl" firstAttribute="top" secondItem="cco-Q6-tRx" secondAttribute="bottom" constant="10" id="6Mm-xO-qYJ"/>
+                <constraint firstItem="4A2-IU-DHy" firstAttribute="top" secondItem="cco-Q6-tRx" secondAttribute="bottom" constant="10" id="LsE-TP-wQj"/>
+                <constraint firstItem="4A2-IU-DHy" firstAttribute="centerY" secondItem="S9D-46-kfl" secondAttribute="centerY" id="U9d-0q-Eq7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4A2-IU-DHy" secondAttribute="trailing" constant="24" id="kQQ-Nc-pLg"/>
+                <constraint firstAttribute="trailing" secondItem="cco-Q6-tRx" secondAttribute="trailing" id="ruh-BQ-pco"/>
+                <constraint firstItem="cco-Q6-tRx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xAh-P7-HSz"/>
+            </constraints>
+            <point key="canvasLocation" x="27.536231884057973" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermConditionCheckVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonCheckBox" destination="3ut-gV-kAh" id="UHX-jx-jGz"/>
+                <outlet property="buttonClose" destination="1Sh-ES-Y0N" id="8q0-p9-3UH"/>
+                <outlet property="buttonNext" destination="n8t-y6-xv6" id="VwV-mO-fXB"/>
+                <outlet property="containerViewFailed" destination="TZe-ut-UGQ" id="nmR-HM-hnX"/>
+                <outlet property="imageAlteaIcon" destination="7KX-wz-Qbx" id="mbm-VW-MKe"/>
+                <outlet property="labelAcceptedTermCondition" destination="jlZ-qP-yJD" id="114-fS-Gf3"/>
+                <outlet property="labelResponseFailed" destination="vQE-Wl-qzO" id="g5F-O5-rRJ"/>
+                <outlet property="scrollView" destination="ghA-yL-sug" id="KBh-F5-f9N"/>
+                <outlet property="termConditionLabel" destination="7YE-eD-Met" id="N6l-kO-kPC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainerWebView" destination="EUN-fW-aqi" id="iJk-S1-Adv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-alteacare" translatesAutoresizingMaskIntoConstraints="NO" id="7KX-wz-Qbx">
+                    <rect key="frame" x="24" y="54" width="140" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="ABQ-HI-5TV"/>
+                        <constraint firstAttribute="height" constant="40" id="c8K-w1-VTp"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghA-yL-sug">
+                    <rect key="frame" x="25" y="104" width="325" height="530"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUN-fW-aqi">
+                            <rect key="frame" x="0.0" y="0.0" width="325" height="18"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sedang mengambil data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-eD-Met">
+                                    <rect key="frame" x="0.0" y="0.0" width="325" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="7YE-eD-Met" firstAttribute="height" secondItem="EUN-fW-aqi" secondAttribute="height" id="Jdk-rq-Nn8"/>
+                                <constraint firstAttribute="bottom" secondItem="7YE-eD-Met" secondAttribute="bottom" id="MhD-Vq-Agh"/>
+                                <constraint firstAttribute="trailing" secondItem="7YE-eD-Met" secondAttribute="trailing" id="bsg-uc-oyA"/>
+                                <constraint firstItem="7YE-eD-Met" firstAttribute="leading" secondItem="EUN-fW-aqi" secondAttribute="leading" id="pON-Wl-9cU"/>
+                                <constraint firstItem="7YE-eD-Met" firstAttribute="top" secondItem="EUN-fW-aqi" secondAttribute="top" id="zvR-ag-eEC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="EUN-fW-aqi" secondAttribute="bottom" id="6em-LW-zAw"/>
+                        <constraint firstAttribute="trailing" secondItem="EUN-fW-aqi" secondAttribute="trailing" id="JsM-2y-fKN"/>
+                        <constraint firstItem="EUN-fW-aqi" firstAttribute="leading" secondItem="ghA-yL-sug" secondAttribute="leading" id="RW1-Ij-Lun"/>
+                        <constraint firstItem="EUN-fW-aqi" firstAttribute="width" secondItem="ghA-yL-sug" secondAttribute="width" id="lev-bC-5Zd"/>
+                        <constraint firstItem="EUN-fW-aqi" firstAttribute="top" secondItem="ghA-yL-sug" secondAttribute="top" id="lg6-vo-dLR"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ut-gV-kAh">
+                    <rect key="frame" x="25" y="647.66666666666663" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="YwZ-mA-PEd"/>
+                        <constraint firstAttribute="height" constant="25" id="Yzf-1D-tdd"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="uncheckIcon"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="tU7-fN-6e1"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dengan ini saya menyetujui Syarat dan Ketentuan yang diterapkan oleh AlteaCare" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlZ-qP-yJD">
+                    <rect key="frame" x="58" y="644" width="292" height="28.666666666666629"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="8Ra-em-mza"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8t-y6-xv6">
+                    <rect key="frame" x="25" y="714" width="325" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="SFj-3w-sKo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Setuju dan Lanjutkan"/>
+                    <connections>
+                        <action selector="acceptButtonTapped:" destination="-1" eventType="touchUpInside" id="rYN-R8-eNa"/>
+                    </connections>
+                </button>
+                <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZe-ut-UGQ">
+                    <rect key="frame" x="0.0" y="752" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQE-Wl-qzO">
+                            <rect key="frame" x="20" y="21" width="40" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sh-ES-Y0N">
+                            <rect key="frame" x="343" y="19" width="12" height="22"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="alert-close"/>
+                            <connections>
+                                <action selector="setupCloseContainerView:" destination="-1" eventType="touchUpInside" id="lZC-4d-CbE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1Sh-ES-Y0N" secondAttribute="trailing" constant="20" id="OJm-j4-Jhw"/>
+                        <constraint firstItem="vQE-Wl-qzO" firstAttribute="leading" secondItem="TZe-ut-UGQ" secondAttribute="leading" constant="20" id="Ra7-cX-4rk"/>
+                        <constraint firstItem="1Sh-ES-Y0N" firstAttribute="centerY" secondItem="TZe-ut-UGQ" secondAttribute="centerY" id="XJ6-Py-Y7X"/>
+                        <constraint firstItem="vQE-Wl-qzO" firstAttribute="centerY" secondItem="TZe-ut-UGQ" secondAttribute="centerY" id="oOD-uX-tOx"/>
+                        <constraint firstAttribute="height" constant="60" id="yal-WF-EWe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ghA-yL-sug" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.652902" id="6pN-sT-MMn"/>
+                <constraint firstItem="3ut-gV-kAh" firstAttribute="bottom" secondItem="jlZ-qP-yJD" secondAttribute="bottom" id="I7I-R9-0Xe"/>
+                <constraint firstItem="TZe-ut-UGQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KRE-yh-dt4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jlZ-qP-yJD" secondAttribute="trailing" constant="25" id="Lbn-pD-aIz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ghA-yL-sug" secondAttribute="trailing" constant="25" id="NS2-51-lWC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TZe-ut-UGQ" secondAttribute="trailing" id="Ot4-kD-dae"/>
+                <constraint firstItem="n8t-y6-xv6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="WtV-Yz-MEE"/>
+                <constraint firstItem="7KX-wz-Qbx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="a5f-Z4-JQw"/>
+                <constraint firstAttribute="bottom" secondItem="TZe-ut-UGQ" secondAttribute="bottom" id="hxC-m2-yfH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n8t-y6-xv6" secondAttribute="bottom" constant="12" id="ipC-Gb-cvx"/>
+                <constraint firstItem="jlZ-qP-yJD" firstAttribute="top" secondItem="ghA-yL-sug" secondAttribute="bottom" constant="10" id="jPe-Ku-gKy"/>
+                <constraint firstItem="3ut-gV-kAh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="l9w-Sw-hoJ"/>
+                <constraint firstItem="jlZ-qP-yJD" firstAttribute="leading" secondItem="3ut-gV-kAh" secondAttribute="trailing" constant="8" id="oVJ-TZ-87q"/>
+                <constraint firstItem="7KX-wz-Qbx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="p1q-Wv-cQO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n8t-y6-xv6" secondAttribute="trailing" constant="25" id="pOH-C7-uVz"/>
+                <constraint firstItem="ghA-yL-sug" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="voc-q7-ra0"/>
+                <constraint firstItem="ghA-yL-sug" firstAttribute="top" secondItem="7KX-wz-Qbx" secondAttribute="bottom" constant="10" id="zZG-jg-KkQ"/>
+            </constraints>
+            <point key="canvasLocation" x="26.399999999999999" y="77.811094452773617"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alert-close" width="12" height="12"/>
+        <image name="logo-alteacare" width="112.33333587646484" height="32"/>
+        <image name="uncheckIcon" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

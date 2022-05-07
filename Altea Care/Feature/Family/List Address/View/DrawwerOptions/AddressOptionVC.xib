@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressOptionVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="changePrimaryAddressButton" destination="yID-B4-dee" id="hNe-Ol-m3X"/>
+                <outlet property="deleteButton" destination="lfU-g0-LS7" id="NjB-dp-wyB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCk-4T-euW">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Lainnya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nss-My-FZe">
+                            <rect key="frame" x="20" y="30" width="92" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Bk-eb-xSL" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="182" y="12" width="50" height="6"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="KKF-sO-aTp"/>
+                                <constraint firstAttribute="height" constant="6" id="bYG-5r-7AS"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-Hg-g3L">
+                            <rect key="frame" x="20" y="58" width="374" height="90"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yID-B4-dee" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="cz1-5c-FEe"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfU-g0-LS7" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="50" width="374" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="1gQ-k6-SEq"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5Bk-eb-xSL" firstAttribute="top" secondItem="LCk-4T-euW" secondAttribute="top" constant="12" id="2TT-zU-KuO"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HvZ-Hg-g3L" secondAttribute="bottom" constant="15" id="2uj-9J-GKp"/>
+                        <constraint firstItem="HvZ-Hg-g3L" firstAttribute="leading" secondItem="LCk-4T-euW" secondAttribute="leading" constant="20" id="49d-RE-deD"/>
+                        <constraint firstItem="nss-My-FZe" firstAttribute="leading" secondItem="LCk-4T-euW" secondAttribute="leading" constant="20" id="CDW-s7-e7p"/>
+                        <constraint firstItem="nss-My-FZe" firstAttribute="top" secondItem="5Bk-eb-xSL" secondAttribute="bottom" constant="12" id="H9n-zx-lO9"/>
+                        <constraint firstItem="5Bk-eb-xSL" firstAttribute="centerX" secondItem="LCk-4T-euW" secondAttribute="centerX" id="PH1-cN-ZFQ"/>
+                        <constraint firstItem="HvZ-Hg-g3L" firstAttribute="top" secondItem="nss-My-FZe" secondAttribute="bottom" constant="10" id="kJb-wb-4P9"/>
+                        <constraint firstAttribute="trailing" secondItem="HvZ-Hg-g3L" secondAttribute="trailing" constant="20" id="uMo-om-8Y7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LCk-4T-euW" secondAttribute="bottom" id="Dtp-Vh-6eh"/>
+                <constraint firstItem="LCk-4T-euW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EFX-MN-Mvb"/>
+                <constraint firstItem="LCk-4T-euW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nRE-aR-hlt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LCk-4T-euW" secondAttribute="trailing" id="ya0-f8-6Z4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="27.536231884057973" y="93.415178571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

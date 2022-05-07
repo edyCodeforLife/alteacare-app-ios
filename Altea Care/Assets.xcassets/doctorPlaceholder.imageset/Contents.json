@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "doctorPlaceholder.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

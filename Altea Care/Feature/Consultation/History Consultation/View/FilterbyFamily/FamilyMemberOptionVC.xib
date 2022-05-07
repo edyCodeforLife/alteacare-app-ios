@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FamilyMemberOptionVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="3xx-m2-5js" id="eGJ-im-uPe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suS-uh-pll" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saring berdasarkan daftar keluarga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOj-H0-Npf">
+                            <rect key="frame" x="26" y="37" width="362" height="17"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGB-Mq-KOg" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="187" y="19" width="40" height="6"/>
+                            <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="hPd-MN-es4"/>
+                                <constraint firstAttribute="height" constant="6" id="hSo-cQ-uLW"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3xx-m2-5js">
+                            <rect key="frame" x="0.0" y="58" width="414" height="220"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="220" id="KO6-T3-mMX"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3xx-m2-5js" secondAttribute="trailing" id="6v0-gQ-yR4"/>
+                        <constraint firstAttribute="trailing" secondItem="jOj-H0-Npf" secondAttribute="trailing" constant="26" id="7QL-6K-aSj"/>
+                        <constraint firstItem="3xx-m2-5js" firstAttribute="top" secondItem="jOj-H0-Npf" secondAttribute="bottom" constant="4" id="CNa-hv-JoY"/>
+                        <constraint firstItem="jOj-H0-Npf" firstAttribute="leading" secondItem="suS-uh-pll" secondAttribute="leading" constant="26" id="IN0-vX-LNF"/>
+                        <constraint firstItem="MGB-Mq-KOg" firstAttribute="centerX" secondItem="suS-uh-pll" secondAttribute="centerX" id="KS0-FB-i0p"/>
+                        <constraint firstItem="3xx-m2-5js" firstAttribute="leading" secondItem="suS-uh-pll" secondAttribute="leading" id="Srf-hC-Wd9"/>
+                        <constraint firstItem="MGB-Mq-KOg" firstAttribute="top" secondItem="suS-uh-pll" secondAttribute="top" constant="19" id="aoH-Bo-1UM"/>
+                        <constraint firstItem="jOj-H0-Npf" firstAttribute="top" secondItem="MGB-Mq-KOg" secondAttribute="bottom" constant="12" id="dUW-gu-DN2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="suS-uh-pll" secondAttribute="bottom" id="2Il-na-BFM"/>
+                <constraint firstItem="suS-uh-pll" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NTM-3N-U6A"/>
+                <constraint firstItem="suS-uh-pll" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ta7-E2-eJc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="suS-uh-pll" secondAttribute="trailing" id="WUe-wf-Xna"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="99"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

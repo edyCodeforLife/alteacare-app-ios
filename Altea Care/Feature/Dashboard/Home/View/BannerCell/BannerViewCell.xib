@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="bannerCell" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="BannerViewCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="140"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="290" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYg-f1-Eyg">
+                        <rect key="frame" x="0.0" y="0.0" width="290" height="140"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0t3-NI-5nq">
+                                <rect key="frame" x="0.0" y="0.0" width="290" height="140"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0t3-NI-5nq" firstAttribute="leading" secondItem="RYg-f1-Eyg" secondAttribute="leading" id="8HD-S7-3sG"/>
+                            <constraint firstAttribute="bottom" secondItem="0t3-NI-5nq" secondAttribute="bottom" id="LeM-8c-bHz"/>
+                            <constraint firstItem="0t3-NI-5nq" firstAttribute="top" secondItem="RYg-f1-Eyg" secondAttribute="top" id="QVh-7q-F45"/>
+                            <constraint firstAttribute="trailing" secondItem="0t3-NI-5nq" secondAttribute="trailing" id="psN-q9-Rgc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RYg-f1-Eyg" secondAttribute="trailing" id="2bE-JU-gsv"/>
+                <constraint firstAttribute="bottom" secondItem="RYg-f1-Eyg" secondAttribute="bottom" id="DIN-6E-yHn"/>
+                <constraint firstItem="RYg-f1-Eyg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jJ5-gA-nEd"/>
+                <constraint firstItem="RYg-f1-Eyg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mIs-df-ZZo"/>
+            </constraints>
+            <size key="customSize" width="319" height="201"/>
+            <connections>
+                <outlet property="imageView" destination="0t3-NI-5nq" id="Vvt-Bk-f6C"/>
+            </connections>
+            <point key="canvasLocation" x="331.8840579710145" y="141.29464285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>

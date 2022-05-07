@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorPaymentVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="errorImage" destination="DOG-5b-Ges" id="3vb-a3-0Wi"/>
+                <outlet property="errorLbl" destination="7xW-Ij-Qje" id="yfs-8J-tOD"/>
+                <outlet property="submitBtn" destination="Ur0-sO-rl2" id="fk2-UD-ADa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="273"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jU-FN-g2E" userLabel="container">
+                    <rect key="frame" x="0.0" y="44" width="352" height="229"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWE-xa-Efz" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="156" y="20" width="40" height="6"/>
+                            <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="CDK-II-H4G"/>
+                                <constraint firstAttribute="width" constant="40" id="qqY-fb-oMf"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_error_payment" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-5b-Ges">
+                            <rect key="frame" x="151" y="58" width="50" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="5f1-cv-Kgs"/>
+                                <constraint firstAttribute="width" constant="50" id="F9G-Ms-h4g"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xW-Ij-Qje">
+                            <rect key="frame" x="15" y="122" width="322" height="10"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                            <color key="textColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ur0-sO-rl2" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="25" y="164" width="302" height="45"/>
+                            <color key="backgroundColor" red="0.24313725490196078" green="0.5490196078431373" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="tYP-gN-kgO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="cWE-xa-Efz" firstAttribute="top" secondItem="6jU-FN-g2E" secondAttribute="top" constant="20" id="2TY-mh-UmB"/>
+                        <constraint firstItem="Ur0-sO-rl2" firstAttribute="top" secondItem="7xW-Ij-Qje" secondAttribute="bottom" constant="32" id="4OA-cj-fwS"/>
+                        <constraint firstItem="Ur0-sO-rl2" firstAttribute="leading" secondItem="6jU-FN-g2E" secondAttribute="leading" constant="25" id="7zw-MX-9wx"/>
+                        <constraint firstItem="DOG-5b-Ges" firstAttribute="centerX" secondItem="6jU-FN-g2E" secondAttribute="centerX" id="9iP-zb-hCg"/>
+                        <constraint firstItem="DOG-5b-Ges" firstAttribute="top" secondItem="cWE-xa-Efz" secondAttribute="bottom" constant="32" id="KuQ-y4-BCw"/>
+                        <constraint firstAttribute="trailing" secondItem="7xW-Ij-Qje" secondAttribute="trailing" constant="15" id="Qq1-Hu-hhF"/>
+                        <constraint firstItem="7xW-Ij-Qje" firstAttribute="top" secondItem="DOG-5b-Ges" secondAttribute="bottom" constant="10" id="TDw-E0-nmH"/>
+                        <constraint firstAttribute="trailing" secondItem="Ur0-sO-rl2" secondAttribute="trailing" constant="25" id="dW1-GP-vAL"/>
+                        <constraint firstItem="7xW-Ij-Qje" firstAttribute="leading" secondItem="6jU-FN-g2E" secondAttribute="leading" constant="15" id="ln2-E3-vYg"/>
+                        <constraint firstAttribute="bottom" secondItem="Ur0-sO-rl2" secondAttribute="bottom" constant="20" id="uOM-xQ-SJi"/>
+                        <constraint firstItem="cWE-xa-Efz" firstAttribute="centerX" secondItem="6jU-FN-g2E" secondAttribute="centerX" id="woY-So-tzK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6jU-FN-g2E" secondAttribute="trailing" id="ERC-V7-XjW"/>
+                <constraint firstItem="6jU-FN-g2E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fbk-dZ-ein"/>
+                <constraint firstItem="6jU-FN-g2E" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HHA-Z9-mr6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6jU-FN-g2E" secondAttribute="bottom" id="Hxx-HN-K7H"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="169.56521739130437" y="-252.79017857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_error_payment" width="50" height="54"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

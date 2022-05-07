@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyPhoneNumberVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="iconExclamation" destination="XUz-P1-D1H" id="qdk-ik-XoW"/>
+                <outlet property="labelCounterTime" destination="tDg-aU-5dG" id="WrQ-Ak-YgM"/>
+                <outlet property="labelMessage" destination="3hH-wT-nF1" id="ic8-pN-JMP"/>
+                <outlet property="labelResend" destination="h2H-Ea-hxy" id="UPN-ul-vch"/>
+                <outlet property="labelWarning" destination="mGC-T9-YM5" id="Bit-7B-BA9"/>
+                <outlet property="tfOtpPhoneNumber" destination="uXs-iL-7Bk" id="QgX-Hq-QcR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hH-wT-nF1">
+                    <rect key="frame" x="25" y="194" width="364" height="36"/>
+                    <string key="text">Kode verifikasi telah dikirim via
+SMS ke </string>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukkan kode OTP disini" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXs-iL-7Bk">
+                    <rect key="frame" x="24" y="255" width="366" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="xo1-52-1cq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                    <connections>
+                        <action selector="otpSended:" destination="-1" eventType="editingChanged" id="d7g-31-yiG"/>
+                    </connections>
+                </textField>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XUz-P1-D1H">
+                    <rect key="frame" x="125.5" y="315" width="20" height="19"/>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kode verifikasi salah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGC-T9-YM5">
+                    <rect key="frame" x="149.5" y="317" width="115.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-aU-5dG">
+                    <rect key="frame" x="181" y="356.5" width="52" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tidak terima SMS ? Kirim Ulang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-Ea-hxy">
+                    <rect key="frame" x="25" y="384.5" width="364" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZT-FH-vbR">
+                    <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox_checked.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nc6-g8-kmd">
+                            <rect key="frame" x="25" y="12.5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="iaz-k8-DRV"/>
+                                <constraint firstAttribute="width" constant="25" id="y3u-7a-Y2k"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifikasi Berhasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-8r-upf">
+                            <rect key="frame" x="60" y="16" width="121" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert-close" translatesAutoresizingMaskIntoConstraints="NO" id="Di4-yC-YO7">
+                            <rect key="frame" x="364" y="12.5" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="CjC-Iu-bWz"/>
+                                <constraint firstAttribute="height" constant="25" id="YVn-4a-oqr"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstItem="rb1-8r-upf" firstAttribute="leading" secondItem="Nc6-g8-kmd" secondAttribute="trailing" constant="10" id="9nU-ox-rj8"/>
+                        <constraint firstItem="Di4-yC-YO7" firstAttribute="centerY" secondItem="xZT-FH-vbR" secondAttribute="centerY" id="Btb-gr-QCy"/>
+                        <constraint firstItem="rb1-8r-upf" firstAttribute="centerY" secondItem="xZT-FH-vbR" secondAttribute="centerY" id="H70-ps-gY0"/>
+                        <constraint firstItem="Nc6-g8-kmd" firstAttribute="leading" secondItem="xZT-FH-vbR" secondAttribute="leading" constant="25" id="HXe-Qh-Zak"/>
+                        <constraint firstItem="Nc6-g8-kmd" firstAttribute="centerY" secondItem="xZT-FH-vbR" secondAttribute="centerY" id="KUe-0b-1OA"/>
+                        <constraint firstAttribute="height" constant="50" id="PnJ-cq-nFr"/>
+                        <constraint firstAttribute="trailing" secondItem="Di4-yC-YO7" secondAttribute="trailing" constant="25" id="cjF-5B-37O"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flr-xg-nUr">
+                    <rect key="frame" x="25" y="410.5" width="364" height="30"/>
+                    <state key="normal" title="Ubah nomor ponsel"/>
+                    <connections>
+                        <action selector="changePhoneNumberTapped:" destination="-1" eventType="touchUpInside" id="aIf-v5-VHb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mGC-T9-YM5" firstAttribute="centerY" secondItem="XUz-P1-D1H" secondAttribute="centerY" id="0xl-OJ-030"/>
+                <constraint firstItem="flr-xg-nUr" firstAttribute="top" secondItem="h2H-Ea-hxy" secondAttribute="bottom" constant="8" id="1AT-fz-Rit"/>
+                <constraint firstItem="h2H-Ea-hxy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="E6D-ed-nUp"/>
+                <constraint firstItem="tDg-aU-5dG" firstAttribute="top" secondItem="mGC-T9-YM5" secondAttribute="bottom" constant="25" id="EUk-Sq-4UJ"/>
+                <constraint firstItem="mGC-T9-YM5" firstAttribute="leading" secondItem="XUz-P1-D1H" secondAttribute="trailing" constant="4" id="GWb-5T-jk1"/>
+                <constraint firstItem="flr-xg-nUr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="NCQ-JB-Ph5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xZT-FH-vbR" secondAttribute="trailing" id="WWT-pg-vB6"/>
+                <constraint firstItem="3hH-wT-nF1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="XX5-Ag-iQ0"/>
+                <constraint firstItem="3hH-wT-nF1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="YJr-ce-YVh"/>
+                <constraint firstItem="uXs-iL-7Bk" firstAttribute="top" secondItem="3hH-wT-nF1" secondAttribute="bottom" constant="25" id="ZXI-fW-gNN"/>
+                <constraint firstItem="tDg-aU-5dG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fIA-Dg-oNS"/>
+                <constraint firstItem="uXs-iL-7Bk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="h8q-DS-uHS"/>
+                <constraint firstItem="h2H-Ea-hxy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n44-Za-hzY"/>
+                <constraint firstItem="mGC-T9-YM5" firstAttribute="top" secondItem="uXs-iL-7Bk" secondAttribute="bottom" constant="10" id="o1D-b2-jQA"/>
+                <constraint firstItem="mGC-T9-YM5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pUi-EG-ESV"/>
+                <constraint firstItem="h2H-Ea-hxy" firstAttribute="top" secondItem="tDg-aU-5dG" secondAttribute="bottom" constant="10" id="qUI-e9-LbK"/>
+                <constraint firstItem="uXs-iL-7Bk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sht-fK-hf1"/>
+                <constraint firstAttribute="bottom" secondItem="xZT-FH-vbR" secondAttribute="bottom" id="tUu-FX-s35"/>
+                <constraint firstItem="3hH-wT-nF1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u2B-ZO-1KM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="flr-xg-nUr" secondAttribute="trailing" constant="25" id="vzz-ud-wkY"/>
+                <constraint firstItem="xZT-FH-vbR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="x2J-GL-ja7"/>
+            </constraints>
+            <point key="canvasLocation" x="92.753623188405811" y="78.348214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alert-close" width="12" height="12"/>
+        <image name="checkbox_checked.png" width="22" height="22"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleTimePickerVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionViewSchedule" destination="jHC-RY-OyE" id="lPJ-iE-JMt"/>
+                <outlet property="emptyView" destination="jUK-xc-ZmV" id="5KS-0d-MMZ"/>
+                <outlet property="labelDate" destination="A3K-uN-Pqs" id="ifq-9x-979"/>
+                <outlet property="labelPilihJadwal" destination="hwr-ET-Jwd" id="bdx-8c-9ny"/>
+                <outlet property="line" destination="xjq-WG-STw" id="K8s-Ii-ldc"/>
+                <outlet property="submitButton" destination="vbT-nq-Vri" id="rQc-lD-vgX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFd-Jd-PVg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Jadwal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwr-ET-Jwd">
+                            <rect key="frame" x="163.5" y="46" width="87" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="0.24636417629999999" green="0.54549121860000005" blue="0.72551780939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-WG-STw" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="187" y="20" width="40" height="6"/>
+                            <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="esv-w5-3sG"/>
+                                <constraint firstAttribute="width" constant="40" id="g4y-WX-bO8"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selasa, 14 Desember 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-uN-Pqs">
+                            <rect key="frame" x="18" y="78" width="174" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.1750493944" green="0.3163197935" blue="0.54512560369999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jHC-RY-OyE">
+                            <rect key="frame" x="14" y="105" width="386" height="129"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WNX-0B-6og">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-xc-ZmV">
+                            <rect key="frame" x="12" y="105" width="390" height="129"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconEmptySchedule" translatesAutoresizingMaskIntoConstraints="NO" id="08e-58-I8w">
+                                    <rect key="frame" x="156.5" y="18" width="77.5" height="73"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jadwal belum tersedia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEg-JI-YYj">
+                                    <rect key="frame" x="123" y="101" width="144.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="mEg-JI-YYj" firstAttribute="top" secondItem="08e-58-I8w" secondAttribute="bottom" constant="10" id="0cd-4t-T3h"/>
+                                <constraint firstItem="mEg-JI-YYj" firstAttribute="centerX" secondItem="jUK-xc-ZmV" secondAttribute="centerX" id="dot-wb-4VA"/>
+                                <constraint firstItem="08e-58-I8w" firstAttribute="centerY" secondItem="jUK-xc-ZmV" secondAttribute="centerY" constant="-10" id="er2-BW-B3F"/>
+                                <constraint firstItem="08e-58-I8w" firstAttribute="centerX" secondItem="jUK-xc-ZmV" secondAttribute="centerX" id="vcN-5Z-RQA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-nq-Vri" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="20" y="258" width="374" height="52"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="yO1-v7-Q2j"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="A3K-uN-Pqs" firstAttribute="top" secondItem="hwr-ET-Jwd" secondAttribute="bottom" constant="14" id="1Eq-iE-AxW"/>
+                        <constraint firstItem="vbT-nq-Vri" firstAttribute="centerX" secondItem="wFd-Jd-PVg" secondAttribute="centerX" id="4Ok-Cq-rmR"/>
+                        <constraint firstAttribute="bottom" secondItem="vbT-nq-Vri" secondAttribute="bottom" constant="20" id="DPv-c2-Buq"/>
+                        <constraint firstItem="jHC-RY-OyE" firstAttribute="leading" secondItem="wFd-Jd-PVg" secondAttribute="leading" constant="14" id="Gnu-vl-Edl"/>
+                        <constraint firstItem="xjq-WG-STw" firstAttribute="top" secondItem="wFd-Jd-PVg" secondAttribute="top" constant="20" id="PuT-Eu-6CP"/>
+                        <constraint firstItem="hwr-ET-Jwd" firstAttribute="centerX" secondItem="wFd-Jd-PVg" secondAttribute="centerX" id="QFT-MS-YKg"/>
+                        <constraint firstItem="vbT-nq-Vri" firstAttribute="top" secondItem="jUK-xc-ZmV" secondAttribute="bottom" constant="24" id="SlF-IN-hST"/>
+                        <constraint firstItem="vbT-nq-Vri" firstAttribute="leading" secondItem="wFd-Jd-PVg" secondAttribute="leading" constant="20" id="YWY-mm-GuD"/>
+                        <constraint firstItem="A3K-uN-Pqs" firstAttribute="leading" secondItem="wFd-Jd-PVg" secondAttribute="leading" constant="18" id="emN-3Q-Coo"/>
+                        <constraint firstItem="jUK-xc-ZmV" firstAttribute="leading" secondItem="wFd-Jd-PVg" secondAttribute="leading" constant="12" id="ji3-8y-vhP"/>
+                        <constraint firstItem="vbT-nq-Vri" firstAttribute="top" secondItem="jHC-RY-OyE" secondAttribute="bottom" constant="24" id="kcs-Uq-diF"/>
+                        <constraint firstAttribute="trailing" secondItem="jHC-RY-OyE" secondAttribute="trailing" constant="14" id="nzF-PA-GdX"/>
+                        <constraint firstItem="hwr-ET-Jwd" firstAttribute="top" secondItem="xjq-WG-STw" secondAttribute="bottom" constant="20" id="rj1-Jb-LTQ"/>
+                        <constraint firstAttribute="trailing" secondItem="jUK-xc-ZmV" secondAttribute="trailing" constant="12" id="wxm-Ip-Pqo"/>
+                        <constraint firstItem="jUK-xc-ZmV" firstAttribute="top" secondItem="A3K-uN-Pqs" secondAttribute="bottom" constant="10" id="xtn-du-16g"/>
+                        <constraint firstItem="xjq-WG-STw" firstAttribute="centerX" secondItem="wFd-Jd-PVg" secondAttribute="centerX" id="yih-HR-foz"/>
+                        <constraint firstItem="jHC-RY-OyE" firstAttribute="top" secondItem="A3K-uN-Pqs" secondAttribute="bottom" constant="10" id="zHh-5h-v3I"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wFd-Jd-PVg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KBE-H5-Wew"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wFd-Jd-PVg" secondAttribute="trailing" id="OkB-Oz-jyl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wFd-Jd-PVg" secondAttribute="bottom" id="YJ0-2U-Z0j"/>
+                <constraint firstItem="wFd-Jd-PVg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uXV-31-0xY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="28.985507246376812" y="119.53125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconEmptySchedule" width="77.5" height="73"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

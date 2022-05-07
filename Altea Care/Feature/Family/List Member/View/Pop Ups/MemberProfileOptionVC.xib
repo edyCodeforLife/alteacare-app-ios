@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemberProfileOptionVC" customModule="Altea_Care" customModuleProvider="target">
+            <connections>
+                <outlet property="mainAccButton" destination="daS-uk-OpR" id="t7P-1s-vZJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJc-EH-CCL" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilihan Lainnya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX4-Dg-cTK">
+                            <rect key="frame" x="26" y="37" width="362" height="17"/>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WWM-50-Zk9">
+                            <rect key="frame" x="26" y="72" width="362" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daS-uk-OpR" customClass="ACButton" customModule="Altea_Care" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="362" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="lKm-X8-GVv"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </stackView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKS-UI-fiB" customClass="ACView" customModule="Altea_Care" customModuleProvider="target">
+                            <rect key="frame" x="187" y="19" width="40" height="6"/>
+                            <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="TSO-go-l15"/>
+                                <constraint firstAttribute="width" constant="40" id="kSw-qN-FLg"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="WWM-50-Zk9" firstAttribute="top" secondItem="OX4-Dg-cTK" secondAttribute="bottom" constant="18" id="8OJ-V6-Fum"/>
+                        <constraint firstAttribute="trailing" secondItem="WWM-50-Zk9" secondAttribute="trailing" constant="26" id="GPa-1o-h7F"/>
+                        <constraint firstAttribute="trailing" secondItem="OX4-Dg-cTK" secondAttribute="trailing" constant="26" id="H03-U4-iJm"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WWM-50-Zk9" secondAttribute="bottom" constant="15" id="PN2-na-tsU"/>
+                        <constraint firstItem="OX4-Dg-cTK" firstAttribute="leading" secondItem="kJc-EH-CCL" secondAttribute="leading" constant="26" id="Sev-q7-MtZ"/>
+                        <constraint firstItem="PKS-UI-fiB" firstAttribute="top" secondItem="kJc-EH-CCL" secondAttribute="top" constant="19" id="UBl-Yg-SvN"/>
+                        <constraint firstAttribute="height" constant="191" id="bNG-lY-8XK"/>
+                        <constraint firstItem="PKS-UI-fiB" firstAttribute="centerX" secondItem="kJc-EH-CCL" secondAttribute="centerX" id="eNM-re-oYO"/>
+                        <constraint firstItem="OX4-Dg-cTK" firstAttribute="top" secondItem="PKS-UI-fiB" secondAttribute="bottom" constant="12" id="lFL-US-dLf"/>
+                        <constraint firstItem="WWM-50-Zk9" firstAttribute="leading" secondItem="kJc-EH-CCL" secondAttribute="leading" constant="26" id="wxV-MY-zt2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kJc-EH-CCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1fd-fi-RBs"/>
+                <constraint firstItem="kJc-EH-CCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="68j-g6-jhu"/>
+                <constraint firstAttribute="bottom" secondItem="kJc-EH-CCL" secondAttribute="bottom" id="Fgx-t6-C3K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kJc-EH-CCL" secondAttribute="trailing" id="vYR-3I-vhp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="106" y="115"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

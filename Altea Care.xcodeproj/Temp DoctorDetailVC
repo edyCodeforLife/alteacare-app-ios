@@ -1,0 +1,382 @@
+//
+//  DetailDoctorVC.swift
+//  Altea Care
+//
+//  Created by Hedy on 06/03/21.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+import PanModal
+
+class DetailDoctorVC: UIViewController, DetailDoctorView, PanModalPresentable {
+    
+    var panScrollable: UIScrollView?
+    var onButtonSeeAllSchedule: (() -> Void)?
+    var onButtonNextTapped: (() -> Void)?
+    var viewModel: DetailDoctorVM!
+    var onDatetimeTapped: (() -> Void)?
+    
+    @IBOutlet weak var imageViewDoctor: UIImageView!
+    @IBOutlet weak var stackContainerDoctor: UIStackView!
+    @IBOutlet weak var labelDoctorName: UILabel!
+    @IBOutlet weak var labelSpecialist: UILabel!
+    @IBOutlet weak var imageMika: UIImageView!
+    @IBOutlet weak var labelHospitalName: UILabel!
+    @IBOutlet weak var labelLanguageSkill: UILabel!
+    @IBOutlet weak var labelExperience: UILabel!
+    @IBOutlet weak var labelScheduleList: UILabel!
+    @IBOutlet weak var labelScheduleInfo: UILabel!
+    @IBOutlet weak var viewSelectDate: UIView!
+    @IBOutlet weak var labelSetDate: UILabel!
+    @IBOutlet weak var imageIconDate: UIImageView!
+    @IBOutlet weak var collectionViewDaySelect: UICollectionView!
+    @IBOutlet weak var collectionViewTimeSchedule: UICollectionView!
+    @IBOutlet weak var labelDoctorProfile: UILabel!
+    @IBOutlet weak var labelDoctorDescription: UILabel!
+    @IBOutlet weak var labelTitleSpecialist: UILabel!
+    @IBOutlet weak var labelDoctorAbility: UILabel!
+    @IBOutlet weak var labelTitleCancelRefund: UILabel!
+    @IBOutlet weak var labelRefundExplanation: UILabel!
+    @IBOutlet weak var viewButton: UIView!
+    @IBOutlet weak var buttonSubmit: UIButton!
+    
+    ///Stack View
+    @IBOutlet weak var stackDoctor: UIStackView!
+    @IBOutlet weak var stackSelectSchedule: UIStackView!
+    @IBOutlet weak var stackSelectDay: UIStackView!
+    @IBOutlet weak var stackSelectTime: UIStackView!
+    @IBOutlet weak var stackTermCondition: UIStackView!
+    @IBOutlet weak var stackDoctorProfile: UIStackView!
+    
+    @IBOutlet weak var collectionViewVerticalDaysForward: UICollectionView!
+    
+    private var tempDateSelected : String = "2021-06-19"
+    private var tempTimeScheduleSelected : String = ""
+    var datePicker = UIDatePicker()
+    
+    private let disposeBag = DisposeBag()
+    private let detailsDoctorData = BehaviorRelay<String?>(value: "")
+    private let scheduleDoctor = BehaviorRelay<DoctorScheduleBody>(value: DoctorScheduleBody(idDoctor: "608145c41d2f8c0012495e20", date: "2021-06-19"))
+    
+    var modelDataDoctor : DetailDoctorModel? = nil
+    
+    private var model = [DayName](){
+        didSet{
+            self.collectionViewDaySelect.reloadData()
+        }
+    }
+    
+    //MARK: - Set Time schedule
+    private var modelTime = [DoctorScheduleDataModel](){
+        didSet{
+            self.collectionViewTimeSchedule.reloadData()
+        }
+    }
+    
+//    private var sevenDateListModel = [CalenderModel](){
+//        didSet{
+//            self.collectionViewVerticalDaysForward.reloadData()
+//        }
+//    }
+    
+    private lazy var scheduleDoctorList : ScheduleTimePickerVC = {
+        let vc = ScheduleTimePickerVC()
+        vc.delegate = self
+        return vc
+    }()
+    
+    private lazy var dateTime : DatePickerVC = {
+        let vc = DatePickerVC()
+        vc.delegate = self
+        return vc
+    }()
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        self.onDatetimeTapped?()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupNavigation()
+        self.setupButtonView()
+        self.setupLabelExperience()
+        self.registerCollectionViewCell()
+        self.setupDummyDay()
+        self.setupLabelDatePicker()
+        //        self.setupInitiateView()
+        self.dateSelected()
+        //        self.setupViewInitiate()
+        self.scheduleDoctor.accept(DoctorScheduleBody(idDoctor: "608145c41d2f8c0012495e20", date: "2021-06-19"))
+        self.detailsDoctorData.accept("608145c41d2f8c0012495e20")
+        self.bindViewModel()
+    }
+    
+    //MARK: - Setup data doctor
+    func setupDataDoctor(data: DetailDoctorModel?){
+        if let urlPhotoPerson = URL(string: data?.photo ?? ""){
+            imageViewDoctor.kf.setImage(with: urlPhotoPerson)
+        }
+        if let urlPhotoHospital = URL(string: data?.iconHospital ?? "" ){
+            imageMika.kf.setImage(with: urlPhotoHospital)
+        }
+        
+        labelSpecialist.text = data?.specialization
+        labelExperience.text = data?.experience
+        labelDoctorName.text = data?.name
+        labelHospitalName.text = data?.nameHospital
+    }
+    
+    //MARK: - label set date tapped
+    func setupLabelDatePicker(){
+        let text = "Atur Tanggal"
+        
+        self.labelSetDate.text = text
+        self.labelSetDate.isUserInteractionEnabled = true
+        
+        self.labelSetDate.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(taplabelDate(gesture:))))
+    }
+    
+    //MARK: - Configure pan model when Atur Tanggal tapping
+    @objc func taplabelDate(gesture: UITapGestureRecognizer){
+        let textRange = (labelSetDate.text! as NSString).range(of: "Atur Tanggal")
+        
+        if gesture.didTapAttributedTextInLabel(label: self.labelSetDate, inRange: textRange){
+            self.presentPanModal(self.dateTime)
+            print("tapped")
+        } else {
+            print("not tapped")
+        }
+    }
+    
+    func setupNavigation() {
+        self.setTextNavigation(title: "Detail Dokter", navigator: .back)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationController!.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    func bindViewModel() {
+        let input = DetailDoctorVM.Input(doctorDetailsData: self.detailsDoctorData.asObservable(), scheduleData: self.scheduleDoctor.asObservable())
+        let output = viewModel.transform(input)
+        output.state.drive(self.rx.state).disposed(by: self.disposeBag)
+        output.doctorDataDetails.drive { (model) in
+            self.modelDataDoctor = model
+            self.setupDataDoctor(data: self.modelDataDoctor)
+        }.disposed(by: self.disposeBag)
+        output.doctorDetailsSchedule.drive { (list) in
+            self.modelTime = list
+        }.disposed(by: self.disposeBag)
+    }
+    
+    func setupButtonView(){
+        buttonSubmit.layer.cornerRadius = 8
+        buttonSubmit.layer.backgroundColor = UIColor.alteaMainColor.cgColor
+        buttonSubmit.setTitleColor(.white, for: .normal)
+    }
+    
+    func setupLabelExperience(){
+        labelExperience.layer.cornerRadius = 8
+        labelExperience.layer.backgroundColor = UIColor.softblue.cgColor
+    }
+    
+    func registerCollectionViewCell(){
+        let cellNib = UINib(nibName: "DayCollectionViewCell", bundle: nil)
+        self.collectionViewDaySelect.register(cellNib, forCellWithReuseIdentifier: "dayNameCell")
+        
+        let cellNibTime = UINib(nibName: "TimeScheduleCell", bundle: nil)
+        self.collectionViewTimeSchedule.register(cellNibTime, forCellWithReuseIdentifier: "doctorTimeScheduleCell")
+        
+        let cellNibSevenDays = UINib(nibName: "VerticalDayListCell", bundle: nil)
+        self.collectionViewVerticalDaysForward.register(cellNibSevenDays, forCellWithReuseIdentifier: "cellVerticalDaysForward")
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.itemSize = CGSize(width: ((collectionViewTimeSchedule.frame.width-8)/3), height: 28)
+        self.collectionViewTimeSchedule.collectionViewLayout = flowLayout
+        
+        let flowLayoutSevenDays = UICollectionViewFlowLayout()
+        flowLayoutSevenDays.minimumInteritemSpacing = 0
+        flowLayoutSevenDays.itemSize = CGSize(width: collectionViewVerticalDaysForward.frame.width, height: 30)
+        self.collectionViewVerticalDaysForward.collectionViewLayout = flowLayoutSevenDays
+        
+        let flowDayLayout = UICollectionViewFlowLayout()
+        flowDayLayout.minimumLineSpacing = 8.0
+        flowDayLayout.itemSize = CGSize(width: 56, height: 30)
+        flowDayLayout.scrollDirection = .horizontal
+        self.collectionViewDaySelect.collectionViewLayout = flowDayLayout
+        
+        self.collectionViewVerticalDaysForward.delegate = self
+        self.collectionViewVerticalDaysForward.dataSource = self
+        
+        self.collectionViewDaySelect.delegate = self
+        self.collectionViewDaySelect.dataSource = self
+        
+        self.collectionViewTimeSchedule.delegate = self
+        self.collectionViewTimeSchedule.dataSource = self
+        
+        self.collectionViewDaySelect.allowsMultipleSelection = true
+    }
+    
+    //MARK: - Setup for initial schedule view style
+    ///If user have not selected date, so the time scheulde appear based on day selected
+    ///But if user have selected date, so the time schedule is hidden and show 7 forward list asc
+    //    func setupViewInitiate(){
+    //        if tempDateSelected == ""{
+    //            self.collectionViewTimeSchedule.isHidden = false
+    //            self.collectionViewSevenDaysForward.isHidden = true
+    //            self.stackSelectDay.isHidden = false
+    //        } else {
+    //            self.stackSelectDay.isHidden = true
+    //            self.collectionViewTimeSchedule.isHidden = true
+    //            self.collectionViewSevenDaysForward.isHidden = false
+    //        }
+    //    }
+    
+    func setupDummyDay(){
+        self.model.append(DayName(day: "Hari Ini"))
+        self.model.append(DayName(day: "Selasa"))
+        self.model.append(DayName(day: "Rabu"))
+        self.model.append(DayName(day: "Kamis"))
+        self.model.append(DayName(day: "Jumat"))
+        self.model.append(DayName(day: "Sabtu"))
+        self.model.append(DayName(day: "Minggu"))
+    }
+    
+    func arrayOfDates() -> NSArray {
+
+            let numberOfDays: Int = 6
+            let formatter: DateFormatter = DateFormatter()
+            formatter.dateFormat = "dd"
+            let startDate = Date()
+            let calendar = Calendar.current
+            var offset = DateComponents()
+            var dates: [Any] = [formatter.string(from: startDate)]
+
+            for i in 1..<numberOfDays {
+                offset.day = i
+                let nextDay: Date? = calendar.date(byAdding: offset, to: startDate)
+                let nextDayString = formatter.string(from: nextDay!)
+                dates.append(nextDayString)
+            }
+            return dates as NSArray
+        }
+    
+    //SetupDayName using Calender Kit
+    func setupInitiateView(){
+        if tempDateSelected.isEmpty{
+            self.collectionViewDaySelect.isHidden = false
+            self.collectionViewTimeSchedule.isHidden = false
+        } else {
+            self.collectionViewTimeSchedule.isHidden = true
+            self.collectionViewDaySelect.isHidden = true
+            self.collectionViewVerticalDaysForward.isHidden = false
+        }
+    }
+    //setupDoctorTime using Mock Data
+    //SetupHiddenSchedule
+    
+}
+
+extension DetailDoctorVC : UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    //MARK: - Configure data at cell
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.collectionViewTimeSchedule {
+            return modelTime.count
+        } else if collectionView == self.collectionViewDaySelect {
+            return model.count
+        } else {
+            return 7
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cv = collectionView.cellForItem(at: indexPath){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayNameCell", for: indexPath) as? DayCollectionViewCell
+            cell?.backView.backgroundColor = UIColor.white
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.collectionViewTimeSchedule {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "doctorTimeScheduleCell", for: indexPath) as! TimeScheduleCell
+            let model =  self.modelTime[indexPath.row]
+            
+            cell.setupCellTime(model: model)
+            return cell
+        }
+        if collectionView == self.collectionViewDaySelect {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayNameCell", for: indexPath) as! DayCollectionViewCell
+            let model =  self.model[indexPath.row]
+            
+            cell.setupDay(model: model)
+            return cell
+        }
+        
+        if collectionView == self.collectionViewVerticalDaysForward {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellVerticalDaysForward", for: indexPath) as! VerticalDayListCell
+            
+            return cell
+        }
+        
+        return UICollectionViewCell()
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.collectionViewDaySelect {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayNameCell", for: indexPath) as? DayCollectionViewCell
+            cell?.setupBackgroundColorSelected()
+            let model =  self.model[indexPath.row]
+            
+            print("\(model)")
+            
+        } else if collectionView == self.collectionViewTimeSchedule {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "doctorTimeScheduleCell", for: indexPath) as? TimeScheduleCell
+            
+            cell?.setupBackgroundColorDeselected()
+            let model =  self.modelTime[indexPath.row]
+            print("\(model)")
+        } else if collectionView == self.collectionViewVerticalDaysForward {
+            let cell = collectionView.cellForItem(at: indexPath) as! DayCollectionViewCell
+            cell.toogleSelected()
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == self.collectionViewDaySelect {
+            let cell = collectionView.cellForItem(at: indexPath) as! DayCollectionViewCell
+            cell.toogleSelected()
+        }
+        
+        if collectionView == self.collectionViewTimeSchedule {
+            let cell = collectionView.cellForItem(at: indexPath) as! TimeScheduleCell
+            cell.toogleSelected()
+        }
+        
+        if collectionView == self.collectionViewVerticalDaysForward {
+//            let cell = collectionView.cellForItem(at: indexPath) as! VerticalDayListCell
+        }
+    }
+}
+
+
+//MARK: - Delegate Date Picker
+extension DetailDoctorVC : DatePickerDelegate{
+    func dateSelected() {
+        self.tempDateSelected = "\(datePicker.date)"
+        print("\(datePicker.date)")
+    }
+}
+
+extension DetailDoctorVC : ScheduleTimePickerDelegate{
+    func timeSelected() {
+        
+    }
+}
+

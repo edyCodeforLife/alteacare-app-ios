@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AccordionCell" customModule="Altea_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-Cq-pnd">
+                        <rect key="frame" x="18" y="13" width="284" height="18"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-yb-g38">
+                                <rect key="frame" x="0.0" y="0.0" width="232" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="t8b-Kh-mwG">
+                                <rect key="frame" x="240" y="5" width="18" height="8.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="D23-uJ-XoJ"/>
+                                    <constraint firstAttribute="height" constant="18" id="y6f-E8-w8U"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChecklistDoctor" translatesAutoresizingMaskIntoConstraints="NO" id="irq-h2-szh">
+                                <rect key="frame" x="266" y="0.0" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="8Io-o5-mpv"/>
+                                    <constraint firstAttribute="height" constant="18" id="MVx-gE-JTr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Woy-iC-1B1">
+                        <rect key="frame" x="18" y="43" width="284" height="1"/>
+                        <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="pwF-gi-Nml"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vV3-Cq-pnd" secondAttribute="trailing" constant="18" id="8h3-tQ-G0t"/>
+                    <constraint firstItem="vV3-Cq-pnd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="CoW-Nu-Spi"/>
+                    <constraint firstAttribute="bottom" secondItem="Woy-iC-1B1" secondAttribute="bottom" id="EJ6-WO-e28"/>
+                    <constraint firstItem="vV3-Cq-pnd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RS8-gH-pEN"/>
+                    <constraint firstItem="Woy-iC-1B1" firstAttribute="width" secondItem="vV3-Cq-pnd" secondAttribute="width" id="TUD-ux-RZA"/>
+                    <constraint firstItem="Woy-iC-1B1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eiM-RQ-uVE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="-17" y="59"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ChecklistDoctor" width="24" height="24"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+    </resources>
+</document>
